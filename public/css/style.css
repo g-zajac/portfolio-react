@@ -70,8 +70,8 @@ body {
 
 #intro_text {
   position: absolute;
-  top: 10vh;
-  left: 15vw;
+  top: 15vh;
+  left: 10vw;
   width: 60vw;
   /* transform: translate(-50%, -50%); */
   color: var(--main-font-color);
