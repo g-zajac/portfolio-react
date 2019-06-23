@@ -93,22 +93,32 @@ body {
 }
 /* TODO make minatures square */
 .portfolio_grid_wrapper {
-  display: grid;
-  width: 80%;
-  height: 80%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50% 50%;
-  grid-gap: 40px;
-  color: #444;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   /* border: 2px solid red; */
 }
 
 .box {
   position: relative;
-  border-radius: 5px;
-
+  flex-basis: calc(25% - 10px);
+  margin: 25px;
+  box-sizing: border-box;
   /* border: 2px solid orange; */
+}
+
+.box::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.box .portfolio_thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* .a {
