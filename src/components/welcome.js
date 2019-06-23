@@ -11,6 +11,11 @@ const parallaxData = [
         startValue: 0,
         endValue: -200,
         property: "translateY"
+      },
+      {
+        startValue: 1,
+        endValue: 0.6,
+        property: "opacity"
       }
     ]
   }
