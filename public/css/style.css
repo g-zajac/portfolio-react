@@ -4,8 +4,8 @@
   --main-frame-color: rgb(240, 240, 240);
   --link-hover-color: rgb(83, 166, 106);
   --chat-bubble-color: rgb(107, 119, 141);
-  /* --portfolio-bg-color: rgb(252, 251, 251); */
-  --portfolio-bg-color: rgb(56, 56, 56);
+  --portfolio-bg-color: rgb(252, 251, 251);
+  /* --portfolio-bg-color: rgb(56, 56, 56); */
 }
 
 @font-face {
@@ -85,22 +85,25 @@ body {
   width: 100vw;
   background: var(--portfolio-bg-color);
   /* border: 2px solid green; */
+  text-align: -webkit-center;
 }
 /* TODO make minatures square */
 .portfolio_grid_wrapper {
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50% 50%;
   grid-gap: 40px;
   color: #444;
+  align-items: center;
   /* border: 2px solid red; */
 }
 
 .box {
   position: relative;
   border-radius: 5px;
+
   /* border: 2px solid orange; */
 }
 
@@ -158,7 +161,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .box:hover .overlay_box {
