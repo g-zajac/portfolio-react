@@ -48,6 +48,8 @@ export class Portfolio extends React.Component {
             </div>
           </div>
 
+          <Route exact path="/:id" component={Child} />
+
           <Route exact path="/siegfried" render={() => <Siegfried />} />
           <Route exact path="/twelve" render={() => <Twelve />} />
           <Route exact path="/trapped" render={() => <Trapped />} />
@@ -58,4 +60,16 @@ export class Portfolio extends React.Component {
       </div>
     );
   }
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function Child({ match }) {
+  return (
+    <div>
+      <h3>ID: {capitalizeFirstLetter(match.params.id)}</h3>
+    </div>
+  );
 }
