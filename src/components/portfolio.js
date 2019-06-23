@@ -1,14 +1,22 @@
 import React from "react";
-
-export function Portfolio() {
-  return (
-    <div id="portfolio">
-      <div className="portfolio_grid_wrapper">
-        <div class="box a">A</div>
-        <div class="box b">B</div>
-        <div class="box c">C</div>
-        <div class="box d">D</div>
+import { PortfolioMinature } from "./porftolioMinature";
+export class Portfolio extends React.Component {
+  render() {
+    let projectData = this.props.portfolioData;
+    console.log("porftolio Data: ", projectData);
+    return (
+      <div id="portfolio">
+        <div className="portfolio_grid_wrapper">
+          <div className="box a">
+            <PortfolioMinature data={projectData[0]} />
+          </div>
+          <div className="box b">B</div>
+          <div className="box c">
+            <PortfolioMinature data={projectData[1]} />
+          </div>
+          <div className="box d">D</div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
