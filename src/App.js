@@ -6,12 +6,10 @@ import portfolioData from "./data/portfolioData.js";
 
 export default class App extends React.Component {
   render() {
-    let projectData = portfolioData.projects;
-    console.log("App portfolio data: ", projectData);
     return (
       <div className="container">
         <Welcome />
-        <Portfolio portfolioData={projectData} />
+        <Portfolio portfolioData={portfolioData.projects} />
         <Contact />
       </div>
     );
