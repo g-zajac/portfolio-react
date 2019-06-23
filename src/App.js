@@ -9,6 +9,7 @@ export default class App extends React.Component {
     return (
       <div className="container">
         <Welcome />
+
         <Portfolio portfolioData={portfolioData.projects} />
         <Contact />
       </div>
