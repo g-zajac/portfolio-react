@@ -184,7 +184,8 @@ body {
 
 #contact {
   position: relative;
-  height: 100vh;
+  height: 40vh;
   width: 100vw;
-  background: blue;
+  background: var(--portfolio-bg-color);
+  text-align: center;
 }

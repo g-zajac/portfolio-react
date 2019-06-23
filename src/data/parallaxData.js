@@ -21,29 +21,35 @@ let welcomePlxData = [
 let contactPlxData = [
   {
     start: "#contact",
-    duration: "100vh",
+    // startOffset: "100vh",
+    duration: "50vh",
     properties: [
+      {
+        startValue: 50,
+        endValue: 0,
+        unit: "vh",
+        property: "translateY"
+      },
       {
         startValue: 0,
-        endValue: -50,
-        unit: "vh",
-        property: "translateY"
-      }
-    ]
-  },
-  {
-    start: "#contact",
-    startOffset: "200vh",
-    duration: "30vh",
-    properties: [
-      {
-        startValue: -100,
-        endValue: -200,
-        unit: "vh",
-        property: "translateY"
+        endValue: 1,
+        property: "opacity"
       }
     ]
   }
+  // {
+  //   start: "#contact",
+  //   // startOffset: "200vh",
+  //   duration: "30vh",
+  //   properties: [
+  //     {
+  //       startValue: -50,
+  //       endValue: -100,
+  //       unit: "vh",
+  //       property: "translateY"
+  //     }
+  //   ]
+  // }
 ];
 
 export { welcomePlxData, contactPlxData };
