@@ -4,6 +4,7 @@
   --main-frame-color: rgb(240, 240, 240);
   --link-hover-color: rgb(83, 166, 106);
   --chat-bubble-color: rgb(107, 119, 141);
+  --portfolio-bg-color: rgb(252, 251, 251);
 }
 
 @font-face {
@@ -81,9 +82,48 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
-  /* background: green; */
-  border: 1px solid green;
+  background: var(--portfolio-bg-color);
+  border: 2px solid green;
 }
+
+.portfolio_grid_wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  color: #444;
+  border: 2px solid red;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.a {
+  grid-column: 1 / span 2;
+}
+.b {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+.c {
+  grid-column: 1;
+  grid-row: 2;
+}
+.d {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* ------------------------------------------------------------------ */
+/* Contact section
+ ------------------------------------------------------------------ */
 
 #contact {
   position: relative;
