@@ -1,6 +1,8 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "description": "Personal portfolio website build with React",
+  "author": "Grzegorz Zajac",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
