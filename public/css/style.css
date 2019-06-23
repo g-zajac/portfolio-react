@@ -4,7 +4,7 @@
   --main-frame-color: rgb(240, 240, 240);
   --link-hover-color: rgb(83, 166, 106);
   --chat-bubble-color: rgb(107, 119, 141);
-  --portfolio-bg-color: rgb(252, 251, 251);
+  --portfolio-bg-color: rgb(243, 243, 243);
   /* --portfolio-bg-color: rgb(56, 56, 56); */
 }
 
@@ -32,11 +32,15 @@ body {
   font-family: "Space_Mono";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--portfolio-bg-color);
 }
 
 /* ------------------------------------------------------------------ */
 /* Welcome section
  ------------------------------------------------------------------ */
+#container {
+  /* background: var(--portfolio-bg-color); */
+}
 
 #welcome {
   position: relative;
@@ -180,7 +184,8 @@ body {
 
 #contact {
   position: relative;
-  height: 100vh;
+  height: 40vh;
   width: 100vw;
-  background: blue;
+  background: var(--portfolio-bg-color);
+  text-align: center;
 }
