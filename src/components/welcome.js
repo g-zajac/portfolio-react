@@ -3,7 +3,7 @@ import React from "react";
 export function Welcome() {
   return (
     <div id="welcome">
-      <div id="overlay" />
+      <div id="overlay_welcome" />
       <img
         id="background_image"
         src="images/esp8266-cover-1920x1080.jpg"
