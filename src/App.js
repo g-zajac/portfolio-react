@@ -2,7 +2,7 @@ import React from "react";
 import { Welcome } from "./components/welcome";
 import { Portfolio } from "./components/portfolio";
 import { Contact } from "./components/contact";
-import portfolioData from "./data/portfolioData.js";
+import portfolioData from "./data/portfolioData";
 import { welcomePlxData, contactPlxData } from "./data/parallaxData.js";
 import Plx from "react-plx";
 import { BrowserRouter, Route } from "react-router-dom";
