@@ -196,3 +196,17 @@ body {
   object-fit: cover;
   opacity: 0.3;
 }
+
+.project_header {
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* SMT project section
+ ------------------------------------------------------------------ */
+
+.smt {
+  color: white;
+}
