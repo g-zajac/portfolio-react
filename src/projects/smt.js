@@ -2,7 +2,7 @@ import React from "react";
 
 export function Smt() {
   return (
-    <div id="project">
+    <div className="project">
       <p>Project component test - smt</p>
     </div>
   );
