@@ -1,7 +1,5 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
-import PropTypes from "prop-types";
-import CheckButton from "../checkButton";
 
 export class Trapped extends React.Component {
   constructor(props) {
@@ -11,60 +9,14 @@ export class Trapped extends React.Component {
       images: this.props.images,
       selectAllChecked: false
     };
-
-    this.onSelectImage = this.onSelectImage.bind(this);
-    this.getSelectedImages = this.getSelectedImages.bind(this);
-    this.onClickSelectAll = this.onClickSelectAll.bind(this);
   }
 
-  allImagesSelected(images) {
-    var f = images.filter(function(img) {
-      return img.isSelected == true;
-    });
-    return f.length == images.length;
-  }
   onSelectImage(index, image) {
     var images = this.state.images.slice();
     var img = images[index];
     if (img.hasOwnProperty("isSelected")) img.isSelected = !img.isSelected;
     else img.isSelected = true;
 
-    this.setState({
-      images: images
-    });
-
-    if (this.allImagesSelected(images)) {
-      this.setState({
-        selectAllChecked: true
-      });
-    } else {
-      this.setState({
-        selectAllChecked: false
-      });
-    }
-  }
-
-  getSelectedImages() {
-    var selected = [];
-    for (var i = 0; i < this.state.images.length; i++)
-      if (this.state.images[i].isSelected == true) selected.push(i);
-    return selected;
-  }
-
-  onClickSelectAll() {
-    var selectAllChecked = !this.state.selectAllChecked;
-    this.setState({
-      selectAllChecked: selectAllChecked
-    });
-
-    var images = this.state.images.slice();
-    if (selectAllChecked) {
-      for (var i = 0; i < this.state.images.length; i++)
-        images[i].isSelected = true;
-    } else {
-      for (var i = 0; i < this.state.images.length; i++)
-        images[i].isSelected = false;
-    }
     this.setState({
       images: images
     });
@@ -119,104 +71,41 @@ export class Trapped extends React.Component {
             </p>
 
             <div className="images_gallery">
-              <CheckButton
-                index={0}
-                isSelected={this.state.selectAllChecked}
-                onClick={this.onClickSelectAll}
-                parentHover={true}
-                color={"rgba(0,0,0,0.54)"}
-                selectedColor={"#4285f4"}
-                hoverColor={"rgba(0,0,0,0.54)"}
+              <Gallery
+                images={this.state.images}
+                enableImageSelection={false}
+                showLightboxThumbnails={true}
+                rowHeight={84}
               />
-              <div
-                style={{
-                  height: "36px",
-                  display: "flex",
-                  alignItems: "center"
-                }}
-              >
-                select all
-              </div>
-              <div
-                style={{
-                  padding: "2px",
-                  color: "#666"
-                }}
-              >
-                Selected images: {this.getSelectedImages().toString()}
-              </div>
-              <div
-                style={{
-                  display: "block",
-                  minHeight: "1px",
-                  width: "100%",
-                  border: "1px solid #ddd",
-                  overflow: "auto"
-                }}
-              >
-                <Gallery
-                  images={this.state.images}
-                  onSelectImage={this.onSelectImage}
-                  showLightboxThumbnails={true}
-                  rowHeight={84}
-                />
-              </div>
             </div>
-
-            <p>
-              To cover long tunnels and underground extend spaces I used
-              multiple PoE WiFi access points, mainly UniFi AP AC Long Range.
-              They share the same SSID on non overlapping radio channels 1,6,11.
-              The ESP8266 chip does not support switching between multiple
-              SSIDs, like mobile phones or laptops. Monitoring and switching
-              procedure was implemented in the code.
-            </p>
           </div>
+
+          <p>
+            To cover long tunnels and underground extend spaces I used multiple
+            PoE WiFi access points, mainly UniFi AP AC Long Range. They share
+            the same SSID on non overlapping radio channels 1,6,11. The ESP8266
+            chip does not support switching between multiple SSIDs, like mobile
+            phones or laptops. Monitoring and switching procedure was
+            implemented in the code.
+          </p>
         </div>
       </div>
     );
   }
 }
 
-Trapped.propTypes = {
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      thumbnail: PropTypes.string.isRequired,
-      srcset: PropTypes.array,
-      caption: PropTypes.string,
-      thumbnailWidth: PropTypes.number.isRequired,
-      thumbnailHeight: PropTypes.number.isRequired,
-      isSelected: PropTypes.bool
-    })
-  ).isRequired
-};
-
-// const captionStyle = {
-//   backgroundColor: "rgba(0, 0, 0, 0.8)",
-//   maxHeight: "240px",
-//   overflow: "hidden",
-//   position: "absolute",
-//   bottom: "0",
-//   width: "100%",
-//   color: "white",
-//   padding: "2px",
-//   fontSize: "90%"
-// };
-//
-// const customTagStyle = {
-//   wordWrap: "break-word",
-//   display: "inline-block",
-//   backgroundColor: "white",
-//   height: "auto",
-//   fontSize: "75%",
-//   fontWeight: "600",
-//   lineHeight: "1",
-//   padding: ".2em .6em .3em",
-//   borderRadius: ".25em",
-//   color: "black",
-//   verticalAlign: "baseline",
-//   margin: "2px"
+// Trapped.propTypes = {
+//   images: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       src: PropTypes.string.isRequired,
+//       thumbnail: PropTypes.string.isRequired,
+//       srcset: PropTypes.array,
+//       caption: PropTypes.string,
+//       thumbnailWidth: PropTypes.number.isRequired,
+//       thumbnailHeight: PropTypes.number.isRequired,
+//       isSelected: PropTypes.bool
+//     })
+//   ).isRequired
 // };
 
 Trapped.defaultProps = {
@@ -245,8 +134,8 @@ Trapped.defaultProps = {
     {
       src: "../images/trapped/trapped03.jpg",
       thumbnail: "../images/trapped/trapped03.jpg",
-      // thumbnailWidth: 320,
-      // thumbnailHeight: 148,
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       // tags: [
       //   { value: "People", title: "People" },
       //   { value: "Architecture", title: "Architecture | Outdoors" },
@@ -258,24 +147,24 @@ Trapped.defaultProps = {
     {
       src: "../images/trapped/trapped04.jpg",
       thumbnail: "../images/trapped/trapped04.jpg",
-      // thumbnailWidth: 320,
-      // thumbnailHeight: 213,
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       caption:
         "Pololu DC-DC 3V3 converter (on side), ESP on top. FET transistor connected directly to ESP PWM output and LED board."
     },
     {
       src: "../images/trapped/trapped05.jpg",
       thumbnail: "../images/trapped/trapped05.jpg",
-      // thumbnailWidth: 248,
-      // thumbnailHeight: 320,
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       caption:
         "PS and Wifi modules mounted together and wired, ready for assembling."
     },
     {
       src: "../images/trapped/trapped06.jpg",
       thumbnail: "../images/trapped/trapped06.jpg",
-      // thumbnailWidth: 320,
-      // thumbnailHeight: 113,
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       // tags: [
       //   { value: "People", title: "People" },
       //   { value: "Industrial", title: "Industrial" }
@@ -285,15 +174,15 @@ Trapped.defaultProps = {
     {
       src: "../images/trapped/trapped07.jpg",
       thumbnail: "../images/trapped/trapped07.jpg",
-      // thumbnailWidth: 313,
-      // thumbnailHeight: 320,
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       caption: "All 40 modified torches."
     },
     {
       src: "../images/trapped/trapped08.jpg",
       thumbnail: "../images/trapped/trapped08.jpg",
-      // thumbnailWidth: 320,
-      // thumbnailHeight: 213,
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       // tags: [{ value: "Nature", title: "Nature | Flowers" }],
       caption: "Testing station, iPad with TouchOSC app and monitoring patch."
     }
