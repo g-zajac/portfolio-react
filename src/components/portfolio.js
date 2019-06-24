@@ -17,15 +17,3 @@ export class Portfolio extends React.Component {
     );
   }
 }
-
-// <Link to={`/${project.component}`} />;
-// <Route exact path="/:id" component={Comp} />;
-//
-// function Comp({ match }) {
-//   console.log("Match: ", match);
-//   return (
-//     <div>
-//       <h3>ID: {match.params.id}</h3>
-//     </div>
-//   );
-// }
