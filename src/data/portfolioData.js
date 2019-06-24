@@ -47,7 +47,7 @@ let portfolioData = {
     {
       title: "The Hairs of Your Head Are Numbered",
       id: 6,
-      link: "/toyh",
+      link: "/hoyh",
       short_description:
         "Sensors for monitoring audience's pulse and GSR. Theatre performance.",
       minature_image_url: "/images/hoyh_thumbnail.jpg",
