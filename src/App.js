@@ -28,16 +28,13 @@ export default class App extends React.Component {
             path="/"
             render={() => <Portfolio portfolioData={portfolioData.projects} />}
           />
-          {portfolioData.projects.map(route => (
-            <Route
-              key={route.id}
-              path={route.link}
-              component={route.component}
-            />
-          ))}
-          ;
+          <Route exact path="/Siegfried" render={() => <Siegfried />} />
+          <Route exact path="/Twelve" render={() => <Twelve />} />
+          <Route exact path="/Trapped" render={() => <Trapped />} />
+          <Route exact path="/Smt" render={() => <Smt />} />
+          <Route exact path="/Strangers" render={() => <Strangers />} />
+          <Route exact path="/Hoyh" render={() => <Hoyh />} />
         </BrowserRouter>
-        <Twelve />
         <Plx className="MyAwesomeParallax" parallaxData={contactPlxData}>
           <Contact />
         </Plx>
@@ -45,11 +42,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-// <Route
-//   exact
-//   path={portfolioData.link}
-//   render={() => {
-//     portfolioData.componenet;
-//   }}
-// />
