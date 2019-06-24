@@ -1,12 +1,13 @@
 import React from "react";
-
+//TODO add link to web page
 export function Smt() {
   return (
     <div className="project" id="smt">
       <div className="project_header">
         <h2>Shiver Me Timbers</h2>
         <h4>Multimedia Server for a stormy sea installation.</h4>
-        <p>Artistic Director, Choreographer: Rachel Jonhson, Experiential</p>
+        <p>Artistic Director, Choreographer: Rachel Jonhson</p>
+        <p>Experiential</p>
         <p>Scenography & Lighitng Design: Shizuka Hariu</p>
         <p>The Word, South Shields, 2017</p>
       </div>
@@ -53,9 +54,3 @@ export function Smt() {
     </div>
   );
 }
-
-// <img
-//   className="project_background_image"
-//   src="../images/smt_cover.jpg"
-//   alt=""
-// />
