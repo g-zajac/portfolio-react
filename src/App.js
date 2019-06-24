@@ -7,12 +7,12 @@ import { welcomePlxData, contactPlxData } from "./data/parallaxData.js";
 import Plx from "react-plx";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import { Siegfried } from "./projects/siegfried";
-import { Twelve } from "./projects/twelve";
-import { Trapped } from "./projects/trapped";
-import { Smt } from "./projects/smt";
-import { Strangers } from "./projects/strangers";
-import { Hoyh } from "./projects/hoyh";
+// import { Siegfried } from "./projects/siegfried";
+// import { Twelve } from "./projects/twelve";
+// import { Trapped } from "./projects/trapped";
+// import { Smt } from "./projects/smt";
+// import { Strangers } from "./projects/strangers";
+// import { Hoyh } from "./projects/hoyh";
 
 export default class App extends React.Component {
   render() {
