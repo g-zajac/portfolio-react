@@ -1,9 +1,24 @@
 import React from "react";
-//TODO add link to web page
+import Switch from "@material-ui/core/Switch";
+
 export function Iot() {
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true
+  });
+  const handleChange = name => event => {
+    setState({ ...state, [name]: event.target.checked });
+  };
   return (
     <div className="project" id="iot">
-      iot test
+      Lamp
+      <Switch
+        checked={state.checkedB}
+        onChange={handleChange("checkedB")}
+        value="checkedB"
+        color="primary"
+        inputProps={{ "aria-label": "primary checkbox" }}
+      />
     </div>
   );
 }
