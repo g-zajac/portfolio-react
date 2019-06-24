@@ -1,37 +1,77 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
 import PropTypes from "prop-types";
+import CheckButton from "../checkButton";
 
 export class Trapped extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      images: this.props.images
+      images: this.props.images,
+      selectAllChecked: false
     };
+
+    this.onSelectImage = this.onSelectImage.bind(this);
+    this.getSelectedImages = this.getSelectedImages.bind(this);
+    this.onClickSelectAll = this.onClickSelectAll.bind(this);
   }
 
-  setCustomTags(i) {
-    return i.tags.map(t => {
-      return (
-        <div key={t.value} style={customTagStyle}>
-          {t.title}
-        </div>
-      );
+  allImagesSelected(images) {
+    var f = images.filter(function(img) {
+      return img.isSelected == true;
+    });
+    return f.length == images.length;
+  }
+  onSelectImage(index, image) {
+    var images = this.state.images.slice();
+    var img = images[index];
+    if (img.hasOwnProperty("isSelected")) img.isSelected = !img.isSelected;
+    else img.isSelected = true;
+
+    this.setState({
+      images: images
+    });
+
+    if (this.allImagesSelected(images)) {
+      this.setState({
+        selectAllChecked: true
+      });
+    } else {
+      this.setState({
+        selectAllChecked: false
+      });
+    }
+  }
+
+  getSelectedImages() {
+    var selected = [];
+    for (var i = 0; i < this.state.images.length; i++)
+      if (this.state.images[i].isSelected == true) selected.push(i);
+    return selected;
+  }
+
+  onClickSelectAll() {
+    var selectAllChecked = !this.state.selectAllChecked;
+    this.setState({
+      selectAllChecked: selectAllChecked
+    });
+
+    var images = this.state.images.slice();
+    if (selectAllChecked) {
+      for (var i = 0; i < this.state.images.length; i++)
+        images[i].isSelected = true;
+    } else {
+      for (var i = 0; i < this.state.images.length; i++)
+        images[i].isSelected = false;
+    }
+    this.setState({
+      images: images
     });
   }
 
   render() {
     console.log("props data in trapped: ", this.props);
-
-    var images = this.state.images.map(i => {
-      i.customOverlay = (
-        <div style={captionStyle}>
-          <div>{i.caption}</div>
-          {i.hasOwnProperty("tags") && this.setCustomTags(i)}
-        </div>
-      );
-      return i;
-    });
 
     return (
       <div className="project" id="trapped">
@@ -78,16 +118,49 @@ export class Trapped extends React.Component {
               level, etc for monitoring purpose i.e: with TouchOSC app.
             </p>
 
-            <div
-              style={{
-                display: "block",
-                minHeight: "1px",
-                width: "100%",
-                border: "1px solid #ddd",
-                overflow: "auto"
-              }}
-            >
-              <Gallery images={images} enableImageSelection={false} />
+            <div className="images_gallery">
+              <CheckButton
+                index={0}
+                isSelected={this.state.selectAllChecked}
+                onClick={this.onClickSelectAll}
+                parentHover={true}
+                color={"rgba(0,0,0,0.54)"}
+                selectedColor={"#4285f4"}
+                hoverColor={"rgba(0,0,0,0.54)"}
+              />
+              <div
+                style={{
+                  height: "36px",
+                  display: "flex",
+                  alignItems: "center"
+                }}
+              >
+                select all
+              </div>
+              <div
+                style={{
+                  padding: "2px",
+                  color: "#666"
+                }}
+              >
+                Selected images: {this.getSelectedImages().toString()}
+              </div>
+              <div
+                style={{
+                  display: "block",
+                  minHeight: "1px",
+                  width: "100%",
+                  border: "1px solid #ddd",
+                  overflow: "auto"
+                }}
+              >
+                <Gallery
+                  images={this.state.images}
+                  onSelectImage={this.onSelectImage}
+                  showLightboxThumbnails={true}
+                  rowHeight={84}
+                />
+              </div>
             </div>
 
             <p>
@@ -113,54 +186,55 @@ Trapped.propTypes = {
       srcset: PropTypes.array,
       caption: PropTypes.string,
       thumbnailWidth: PropTypes.number.isRequired,
-      thumbnailHeight: PropTypes.number.isRequired
+      thumbnailHeight: PropTypes.number.isRequired,
+      isSelected: PropTypes.bool
     })
   ).isRequired
 };
 
-const captionStyle = {
-  backgroundColor: "rgba(0, 0, 0, 0.8)",
-  maxHeight: "240px",
-  overflow: "hidden",
-  position: "absolute",
-  bottom: "0",
-  width: "100%",
-  color: "white",
-  padding: "2px",
-  fontSize: "90%"
-};
-
-const customTagStyle = {
-  wordWrap: "break-word",
-  display: "inline-block",
-  backgroundColor: "white",
-  height: "auto",
-  fontSize: "75%",
-  fontWeight: "600",
-  lineHeight: "1",
-  padding: ".2em .6em .3em",
-  borderRadius: ".25em",
-  color: "black",
-  verticalAlign: "baseline",
-  margin: "2px"
-};
+// const captionStyle = {
+//   backgroundColor: "rgba(0, 0, 0, 0.8)",
+//   maxHeight: "240px",
+//   overflow: "hidden",
+//   position: "absolute",
+//   bottom: "0",
+//   width: "100%",
+//   color: "white",
+//   padding: "2px",
+//   fontSize: "90%"
+// };
+//
+// const customTagStyle = {
+//   wordWrap: "break-word",
+//   display: "inline-block",
+//   backgroundColor: "white",
+//   height: "auto",
+//   fontSize: "75%",
+//   fontWeight: "600",
+//   lineHeight: "1",
+//   padding: ".2em .6em .3em",
+//   borderRadius: ".25em",
+//   color: "black",
+//   verticalAlign: "baseline",
+//   margin: "2px"
+// };
 
 Trapped.defaultProps = {
   images: [
     {
       src: "../images/trapped/trapped01.jpg",
-      thumbnail: "../images/trapped/trapped01.jpg",
-      // thumbnailWidth: 271,
-      // thumbnailHeight: 320,
+      thumbnail: "../images/trapped/trapped01t.jpg",
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       // tags: [{ value: "Nature", title: "Nature | Flowers" }],
       caption:
         "The original head-torch taken apart. The LED board is used as a base for additional components."
     },
     {
       src: "../images/trapped/trapped02.jpg",
-      thumbnail: "../images/trapped/trapped02.jpg",
-      // thumbnailWidth: 320,
-      // thumbnailHeight: 190,
+      thumbnail: "../images/trapped/trapped02t.jpg",
+      thumbnailWidth: 150,
+      thumbnailHeight: 84,
       // tags: [
       //   { value: "Architecture", title: "Architecture | Outdoors" },
       //   { value: "Industrial", title: "Industrial" }
