@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { showProject } from "../actions";
+import { Link } from "react-router-dom";
 
 class PortfolioThumbnail extends React.Component {
   render() {
@@ -9,20 +10,19 @@ class PortfolioThumbnail extends React.Component {
     // console.log("props: ", this.props);
     return (
       <div className="portfolio_thumbnail">
-        <div
-          className="overlay_box"
-          onClick={() => this.props.dispatch(showProject(projectData.id))}
-        >
-          <div className="portfolio_thumbnail_text">
-            <h3>{projectData.title}</h3>
-            <p>{projectData.short_description}</p>
+        <Link to={projectData.link}>
+          <div className="overlay_box">
+            <div className="portfolio_thumbnail_text">
+              <h3>{projectData.title}</h3>
+              <p>{projectData.short_description}</p>
+            </div>
           </div>
-        </div>
-        <img
-          src={projectData.minature_image_url}
-          alt={projectData.minature_image_tag}
-          className="portfolio_thumbnail_image"
-        />
+          <img
+            src={projectData.minature_image_url}
+            alt={projectData.minature_image_tag}
+            className="portfolio_thumbnail_image"
+          />
+        </Link>
       </div>
     );
   }

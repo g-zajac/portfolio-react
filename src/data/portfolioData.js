@@ -3,6 +3,7 @@ let portfolioData = {
     {
       title: "Siegfried",
       id: 1,
+      link: "/siegfried",
       component: "Siegfried",
       short_description:
         "Sparks and fire flames special effect for Siegfried opera.",
@@ -12,6 +13,7 @@ let portfolioData = {
     {
       title: "Twelve",
       id: 2,
+      link: "/twelve",
       component: "Twelve",
       short_description:
         "Contemporary dance performance with with remotely controlled LEDs in costumes.",
@@ -21,6 +23,7 @@ let portfolioData = {
     {
       title: "Trapped",
       id: 3,
+      link: "/trapped",
       component: "Trapped",
       short_description:
         "Head-torches controlled by lighting desk for dance/theatre work.",
@@ -30,6 +33,7 @@ let portfolioData = {
     {
       title: "Shiver Me Timbers",
       id: 4,
+      link: "/smt",
       component: "Smt",
       short_description: "Multimedia Server for a stormy sea installation.",
       minature_image_url: "/images/smt_thumbnail.jpg",
@@ -38,6 +42,7 @@ let portfolioData = {
     {
       title: "Strangers & Others",
       id: 5,
+      link: "/strangers",
       component: "Strangers",
       short_description:
         "Midi Interface for controlling Qlab. Immersive & participatory piece.",
@@ -47,6 +52,7 @@ let portfolioData = {
     {
       title: "The Hairs of Your Head Are Numbered",
       id: 6,
+      link: "/toyh",
       component: "Toyh",
       short_description:
         "Sensors for monitoring audience's pulse and GSR. Theatre performance.",
