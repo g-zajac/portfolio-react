@@ -13,6 +13,7 @@ import { Trapped } from "./projects/trapped";
 import { Smt } from "./projects/smt";
 import { Strangers } from "./projects/strangers";
 import { Hoyh } from "./projects/hoyh";
+import { Iot } from "./projects/iot";
 
 export default class App extends React.Component {
   render() {
@@ -28,12 +29,13 @@ export default class App extends React.Component {
             path="/"
             render={() => <Portfolio portfolioData={portfolioData.projects} />}
           />
-          <Route exact path="/Siegfried" render={() => <Siegfried />} />
-          <Route exact path="/Twelve" render={() => <Twelve />} />
-          <Route exact path="/Trapped" render={() => <Trapped />} />
-          <Route exact path="/Smt" render={() => <Smt />} />
-          <Route exact path="/Strangers" render={() => <Strangers />} />
-          <Route exact path="/Hoyh" render={() => <Hoyh />} />
+          <Route exact path="/siegfried" render={() => <Siegfried />} />
+          <Route exact path="/twelve" render={() => <Twelve />} />
+          <Route exact path="/trapped" render={() => <Trapped />} />
+          <Route exact path="/smt" render={() => <Smt />} />
+          <Route exact path="/strangers" render={() => <Strangers />} />
+          <Route exact path="/hoyh" render={() => <Hoyh />} />
+          <Route exact path="/iot" render={() => <Iot />} />
         </BrowserRouter>
         <Plx className="MyAwesomeParallax" parallaxData={contactPlxData}>
           <Contact />
