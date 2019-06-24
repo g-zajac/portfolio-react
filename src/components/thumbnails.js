@@ -1,12 +1,18 @@
 import React from "react";
+import { connect } from "react-redux";
+import { showProject } from "../actions";
 
-export default class PortfolioThumbnail extends React.Component {
+class PortfolioThumbnail extends React.Component {
   render() {
     let projectData = this.props.data;
-
+    // console.log("projectData in Thumbnail: ", projectData);
+    // console.log("props: ", this.props);
     return (
       <div className="portfolio_thumbnail">
-        <div className="overlay_box">
+        <div
+          className="overlay_box"
+          onClick={() => this.props.dispatch(showProject(projectData.id))}
+        >
           <div className="portfolio_thumbnail_text">
             <h3>{projectData.title}</h3>
             <p>{projectData.short_description}</p>
@@ -21,3 +27,9 @@ export default class PortfolioThumbnail extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {};
+};
+
+export default connect(mapStateToProps)(PortfolioThumbnail);
