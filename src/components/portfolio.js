@@ -1,32 +1,31 @@
 import React from "react";
 import PortfolioThumbnail from "./thumbnails";
+
 export class Portfolio extends React.Component {
   render() {
-    let projectData = this.props.portfolioData;
-
     return (
       <div id="portfolio">
         <div className="portfolio_grid_wrapper">
-          <div className="box a">
-            <PortfolioThumbnail data={projectData[0]} />
-          </div>
-          <div className="box b">
-            <PortfolioThumbnail data={projectData[1]} />
-          </div>
-          <div className="box c">
-            <PortfolioThumbnail data={projectData[2]} />
-          </div>
-          <div className="box d">
-            <PortfolioThumbnail data={projectData[3]} />
-          </div>
-          <div className="box e">
-            <PortfolioThumbnail data={projectData[4]} />
-          </div>
-          <div className="box f">
-            <PortfolioThumbnail data={projectData[5]} />
-          </div>
+          {this.props.portfolioData &&
+            this.props.portfolioData.map(project => (
+              <div className="box" key={project.id}>
+                <PortfolioThumbnail data={project} />
+              </div>
+            ))}
         </div>
       </div>
     );
   }
 }
+
+// <Link to={`/${project.component}`} />;
+// <Route exact path="/:id" component={Comp} />;
+//
+// function Comp({ match }) {
+//   console.log("Match: ", match);
+//   return (
+//     <div>
+//       <h3>ID: {match.params.id}</h3>
+//     </div>
+//   );
+// }
