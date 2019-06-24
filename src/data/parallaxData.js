@@ -1,4 +1,4 @@
-let welcomePlxData = [
+const welcomePlxData = [
   {
     start: 0,
     end: 800,
