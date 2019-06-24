@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 class PortfolioThumbnail extends React.Component {
   render() {
     let projectData = this.props.data;
-    // console.log("projectData in Thumbnail: ", projectData);
-    // console.log("props: ", this.props);
     return (
       <div className="portfolio_thumbnail">
         <Link to={projectData.link}>
