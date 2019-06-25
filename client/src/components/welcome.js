@@ -6,9 +6,16 @@ export function Welcome() {
     <div id="welcome">
       <Zoom cascade>
         <p id="intro_text">
-          Hi, I am Grzegorz Zajac, Berlin based passionate engineer,
-          multidiscipline theatre technician, maker and problem solver. I
-          provide innovative embedded electronic solutions for theatre magic.
+          /*
+          <br />
+          Hi, I am Grzegorz,
+          <br /> Berlin based passionate engineer, multidiscipline theatre
+          technician,
+          <font color="red"> maker and problem solver</font>.<br />I provide
+          innovative embedded <font color="purple">electronic solutions </font>
+          for theatre magic
+          <br />
+          */
         </p>
       </Zoom>
       <div id="overlay_welcome" />
