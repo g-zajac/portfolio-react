@@ -5,7 +5,7 @@ const port = 5000;
 const server = require("http").Server(app);
 
 const io = require("socket.io")(server, {
-    origins: "http://127.0.0.1:5000"
+    origins: "localhost:3000"
 });
 
 app.get("/test", (req, res) => {
@@ -13,7 +13,7 @@ app.get("/test", (req, res) => {
     res.json(test);
 });
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
+server.listen(port, () => console.log(`Server started on port ${port}`));
 
 io.on("connection", function(socket) {
     console.log(`Socket with id ${socket.id} just connected`);
