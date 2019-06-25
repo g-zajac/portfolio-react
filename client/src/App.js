@@ -6,6 +6,7 @@ import portfolioData from "./data/portfolioData";
 import { welcomePlxData, contactPlxData } from "./data/parallaxData.js";
 import Plx from "react-plx";
 import { BrowserRouter, Route } from "react-router-dom";
+import { AnimatedSwitch } from "react-router-transition";
 
 import { Siegfried } from "./projects/siegfried";
 import { Twelve } from "./projects/twelve";
@@ -24,18 +25,27 @@ export default class App extends React.Component {
           <Welcome />
         </Plx>
         <BrowserRouter>
-          <Route
-            exact
-            path="/"
-            render={() => <Portfolio portfolioData={portfolioData.projects} />}
-          />
-          <Route exact path="/siegfried" render={() => <Siegfried />} />
-          <Route exact path="/twelve" render={() => <Twelve />} />
-          <Route exact path="/trapped" render={() => <Trapped />} />
-          <Route exact path="/smt" render={() => <Smt />} />
-          <Route exact path="/strangers" render={() => <Strangers />} />
-          <Route exact path="/hoyh" render={() => <Hoyh />} />
-          <Route exact path="/iot" render={() => <Iot />} />
+          <AnimatedSwitch
+            atEnter={{ opacity: 0 }}
+            atLeave={{ opacity: 0 }}
+            atActive={{ opacity: 1 }}
+            className="switch-wrapper"
+          >
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Portfolio portfolioData={portfolioData.projects} />
+              )}
+            />
+            <Route exact path="/siegfried" render={() => <Siegfried />} />
+            <Route exact path="/twelve" render={() => <Twelve />} />
+            <Route exact path="/trapped" render={() => <Trapped />} />
+            <Route exact path="/smt" render={() => <Smt />} />
+            <Route exact path="/strangers" render={() => <Strangers />} />
+            <Route exact path="/hoyh" render={() => <Hoyh />} />
+            <Route exact path="/iot" render={() => <Iot />} />
+          </AnimatedSwitch>
         </BrowserRouter>
         <Plx className="MyAwesomeParallax" parallaxData={contactPlxData}>
           <Contact />
