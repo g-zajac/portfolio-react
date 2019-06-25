@@ -21,4 +21,11 @@ io.on("connection", function(socket) {
     socket.on("disconnect", function() {
         console.log(`Socket with id ${socket.id} disconnected`);
     });
+
+    socket.on("toggleSwitch", msg => {
+        console.log("socket io received: ", msg);
+    });
+    socket.on("sliderValue", msg => {
+        console.log("socket io received: ", msg);
+    });
 });
