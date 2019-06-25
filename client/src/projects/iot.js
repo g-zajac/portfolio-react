@@ -31,7 +31,7 @@ export function Iot() {
   return (
     <div className="project" id="iot">
       <div className={classes.root}>
-        Lamp
+        Socket
         <Switch
           checked={state.checkedB}
           onChange={toggleHandleChange("checkedB")}
