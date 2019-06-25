@@ -1,7 +1,8 @@
-/node_modules
-/npm-debug.log
+node_modules/
+npm-debug.log
 package-lock.json
 .DS_Store
 notes.md
-images/
+client/public/images
+client/public/fonts
 /public/fonts
