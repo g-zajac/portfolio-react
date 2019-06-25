@@ -1,6 +1,13 @@
-export function showProject(id) {
+export function toggleSwitch(state) {
   return {
-    type: "SHOW_PROJECT",
-    projectId: id
+    type: "TOGGLE_SWITCH",
+    switchState: state
+  };
+}
+
+export function slider(value) {
+  return {
+    type: "SLIDER",
+    sliderValue: value
   };
 }
