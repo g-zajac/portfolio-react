@@ -1,4 +1,6 @@
 var mqtt = require("mqtt");
+
+//TODO put it ot env
 var secrets = require("../secrets.json");
 
 // var client = mqtt.connect("mqtt://10.0.10.30");
