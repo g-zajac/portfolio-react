@@ -15,10 +15,8 @@ options = {
 };
 
 client.on("connect", function() {
-    client.subscribe("presence", function(err) {
-        if (!err) {
-            client.publish("presence", "Hello mqtt");
-        }
+    client.subscribe("/floating/socket1/relay/0/set", function(err) {
+        console.log(err);
     });
     setInterval(function() {
         client.publish("/interval/ping", "test");
@@ -34,6 +32,7 @@ client.on("message", function(topic, message) {
     // message is Buffer
     console.log(topic.toString());
     console.log(message.toString());
+    //TODO send feedback socket io to switch
     // client.end(); //terminating connection and script
 });
 
@@ -41,7 +40,7 @@ function sendTestMessage() {
     client.publish("/web/test", "test");
 }
 function sendToggle(onOff) {
-    client.publish("/bulb/toggle/", onOff);
+    client.publish("/floating/socket1/relay/0/set", onOff);
 }
 function sendValue(value) {
     client.publish("/bulb/value/", value);
