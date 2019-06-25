@@ -31,9 +31,14 @@ io.on("connection", function(socket) {
     });
 
     socket.on("toggleSwitch", msg => {
-        console.log("socket io toggle received: ", msg);
-        mqtt.sendToggle(msg.toString());
+        let toggle;
+        if (msg == true) {
+            toggle = "1";
+        } else toggle = "0";
+        console.log("socket io toggle received: ", toggle);
+        mqtt.sendToggle(toggle);
     });
+
     socket.on("sliderValue", msg => {
         console.log("socket io slider received: ", msg);
         mqtt.sendValue(msg.toString());
