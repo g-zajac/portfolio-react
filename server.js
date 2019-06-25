@@ -1,4 +1,5 @@
 const express = require("express");
+const db = require("./utils/db");
 const app = express();
 console.log(process.env.NODE_PATH);
 var mqtt = require("./utils/mqtt");
@@ -11,9 +12,13 @@ const io = require("socket.io")(server, {
     origins: "localhost:3000"
 });
 
-app.get("/test", (req, res) => {
-    const test = [{ id: 1, name: "John" }, { id: 2, name: "Frank" }];
-    res.json(test);
+app.get("/get-smt-chart-data", (req, res) => {
+    db.getSmtCharData()
+        .then(results => {
+            console.log("db results: ", results.rows);
+            res.json(results.rows);
+        })
+        .catch(err => console.log(err));
 });
 
 server.listen(port, () => console.log(`Server started on port ${port}`));
