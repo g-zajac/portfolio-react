@@ -8,12 +8,14 @@ import { createStore, applyMiddleware } from "redux";
 import reducer from "./reducers";
 import reduxPromise from "redux-promise";
 import { composeWithDevTools } from "redux-devtools-extension";
+import { init as initSocket } from "./socket";
 
 const store = createStore(
   reducer,
   composeWithDevTools(applyMiddleware(reduxPromise))
 );
 
+initSocket(store);
 let element = (
   <Provider store={store}>
     <App />
