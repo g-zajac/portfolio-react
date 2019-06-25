@@ -47,11 +47,12 @@ export function Smt() {
           </p>
         </div>
       </div>
-      <img
-        className="project_background_image"
-        src="../images/smt_cover.jpg"
-        alt=""
-      />
     </div>
   );
 }
+
+// <img
+//   className="project_background_image"
+//   src="../images/smt_cover.jpg"
+//   alt=""
+// />
