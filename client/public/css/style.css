@@ -77,10 +77,14 @@ body {
   width: 60vw;
   /* transform: translate(-50%, -50%); */
   color: var(--main-font-color);
-  font-size: 1.2em;
+  font-family: "Inconsolata", monospace;
+  font-size: 2.5em;
   z-index: 2;
 }
 
+#intro_text.p {
+  line-height: 0.5;
+}
 /* ------------------------------------------------------------------ */
 /* Portfolio section
  ------------------------------------------------------------------ */
@@ -220,5 +224,6 @@ body {
 /* SMT project section
  ------------------------------------------------------------------ */
 #smt {
-  color: var(--porftolio-smt-font-color);
+  /* color: var(--porftolio-smt-font-color); */
+  color: black;
 }
