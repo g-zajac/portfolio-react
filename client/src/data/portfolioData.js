@@ -52,6 +52,23 @@ let portfolioData = {
         "Sensors for monitoring audience's pulse and GSR. Theatre performance.",
       minature_image_url: "/images/hoyh_thumbnail.jpg",
       minature_image_tag: "Midi controller"
+    },
+    {
+      title: "Theatre Lighting Rig Model",
+      id: 7,
+      link: "/minirig",
+      short_description:
+        "Theatre model with minature lighting rig controlled by DMX",
+      minature_image_url: "/images/minirig_thumbnail.jpg",
+      minature_image_tag: "3D printed minature theatre lights"
+    },
+    {
+      title: "Interactive display",
+      id: 8,
+      link: "/expo",
+      short_description: "Interactive LEDs matrix display",
+      minature_image_url: "/images/expo_thumbnail.jpg",
+      minature_image_tag: "3D printed minature theatre lights"
     }
   ]
 };
