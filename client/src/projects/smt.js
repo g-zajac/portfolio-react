@@ -1,5 +1,5 @@
 import React from "react";
-import VisitsChart from "../smtVisitsChart";
+import VisitsChart from "../components/smtVisitsChart";
 //TODO add link to web page
 export function Smt() {
   return (
