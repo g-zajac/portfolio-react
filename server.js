@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+console.log(process.env.NODE_PATH);
+var mqtt = require("./utils/mqtt");
+
 const port = 5000;
 
 const server = require("http").Server(app);
@@ -23,9 +26,11 @@ io.on("connection", function(socket) {
     });
 
     socket.on("toggleSwitch", msg => {
-        console.log("socket io received: ", msg);
+        console.log("socket io toggle received: ", msg);
+        mqtt.sendToggle(msg.toString());
     });
     socket.on("sliderValue", msg => {
-        console.log("socket io received: ", msg);
+        console.log("socket io slider received: ", msg);
+        mqtt.sendValue(msg.toString());
     });
 });
