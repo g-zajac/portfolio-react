@@ -1,4 +1,5 @@
 import React from "react";
+import VisitsChart from "../components/smtVisitsChart";
 //TODO add link to web page
 export function Smt() {
   return (
@@ -28,7 +29,7 @@ export function Smt() {
             lights, sound, motion sensor.
           </p>
         </div>
-
+        <VisitsChart />
         <div className="project_solution">
           <h3>SOLUTION</h3>
           <p>
