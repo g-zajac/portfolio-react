@@ -14,6 +14,7 @@ import { Trapped } from "./projects/trapped";
 import { Smt } from "./projects/smt";
 import { Strangers } from "./projects/strangers";
 import { Hoyh } from "./projects/hoyh";
+import { Minirig } from "./projects/minirig";
 import { Iot } from "./projects/iot";
 
 export default class App extends React.Component {
@@ -44,6 +45,7 @@ export default class App extends React.Component {
             <Route exact path="/smt" render={() => <Smt />} />
             <Route exact path="/strangers" render={() => <Strangers />} />
             <Route exact path="/hoyh" render={() => <Hoyh />} />
+            <Route exact path="/minirig" render={() => <Minirig />} />
             <Route exact path="/iot" render={() => <Iot />} />
           </AnimatedSwitch>
         </BrowserRouter>
