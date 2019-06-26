@@ -10,10 +10,9 @@ export function Welcome() {
           <br />
           Hi, I am Grzegorz,
           <br /> Berlin based passionate engineer, multidiscipline theatre
-          technician,
-          <font color="red"> maker and problem solver</font>.<br />I provide
-          innovative embedded <font color="purple">electronic solutions </font>
-          for theatre magic
+          technician, maker and problem solver.
+          <br />I provide innovative embedded electronic solutions for theatre
+          magic
           <br />
           */
         </p>
@@ -23,3 +22,14 @@ export function Welcome() {
     </div>
   );
 }
+
+/*
+<br />
+Hi, I am Grzegorz,
+<br /> Berlin based passionate engineer, multidiscipline theatre
+technician,
+<font color="red"> maker and problem solver</font>.<br />I provide
+innovative embedded <font color="purple">electronic solutions </font>
+for theatre magic
+<br />
+*/
