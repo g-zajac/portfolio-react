@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Twelve() {
   return (
     <div className="project" id="twelve">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className="project_header">
         <h2>Twelve</h2>
         <h4>

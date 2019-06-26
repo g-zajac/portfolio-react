@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Strangers() {
   return (
     <div className="project" id="strangers">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className="project_header">
         <h2>Strangers & Others</h2>
         <h4>

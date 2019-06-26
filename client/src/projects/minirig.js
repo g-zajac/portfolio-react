@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 export function Minirig() {
   return (
     <div className="project" id="minirig">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className="project_header">
         <h2>Theatre model with minature lighting rig controlled by DMX</h2>
         <h4>Designer: Michael Manion</h4>

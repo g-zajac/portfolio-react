@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Switch from "@material-ui/core/Switch";
 import Slider from "@material-ui/lab/Slider";
 import { makeStyles } from "@material-ui/core/styles";
@@ -30,6 +31,9 @@ export function Iot() {
 
   return (
     <div className="project" id="iot">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className={classes.root}>
         Socket
         <Switch

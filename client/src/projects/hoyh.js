@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Hoyh() {
   return (
     <div className="project" id="hoyh">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className="project_header">
         <h2>The Hairs of Your Head Are Numbered</h2>
         <h4>

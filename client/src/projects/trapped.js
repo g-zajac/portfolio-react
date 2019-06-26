@@ -1,6 +1,6 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
-
+import { Link } from "react-router-dom";
 export class Trapped extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +10,7 @@ export class Trapped extends React.Component {
       selectAllChecked: false
     };
   }
-
+  //TODO trapped challange
   onSelectImage(index, image) {
     var images = this.state.images.slice();
     var img = images[index];
@@ -27,6 +27,9 @@ export class Trapped extends React.Component {
 
     return (
       <div className="project" id="trapped">
+        <Link to="/">
+          <i className="far fa-times-circle fa-2x" />
+        </Link>
         <div className="project_header">
           <h2>Trapped</h2>
           <h4>
@@ -48,7 +51,7 @@ export class Trapped extends React.Component {
           </div>
 
           <div className="project_challenge">
-            <h3>CHALLANGE</h3>
+            <h3>CHALANGE</h3>
             <p>
               Limited audience members wears helmets with head torches. To
               enhance lighting production and audiences darkness experience the

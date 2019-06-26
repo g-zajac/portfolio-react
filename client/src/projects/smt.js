@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import VisitsChart from "../components/smtVisitsChart";
 //TODO add link to web page
 export function Smt() {
   return (
     <div className="project" id="smt">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className="project_header">
         <h2>Shiver Me Timbers</h2>
         <h4>Multimedia Server for a stormy sea installation.</h4>

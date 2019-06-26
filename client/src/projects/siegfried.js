@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Siegfried() {
   return (
     <div className="project" id="siegfried">
+      <Link to="/">
+        <i className="far fa-times-circle fa-2x" />
+      </Link>
       <div className="project_header">
         <h2>Siegfried</h2>
         <h4>Sparks and fire flames special effect for Siegfried opera.</h4>
