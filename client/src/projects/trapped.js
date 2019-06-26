@@ -107,6 +107,8 @@ export class Trapped extends React.Component {
   }
 }
 
+//TODO try to add video to gallery, and block chart
+
 // Trapped.propTypes = {
 //   images: PropTypes.arrayOf(
 //     PropTypes.shape({
