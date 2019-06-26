@@ -32,7 +32,7 @@ let portfolioData = {
       id: 4,
       link: "/smt",
       short_description: "Multimedia Server for a stormy sea installation.",
-      minature_image_url: "/images/smt_thumbnail.jpg",
+      minature_image_url: "/images/thumbnails/smt.jpg",
       minature_image_tag: "Multimedia server"
     },
     {
@@ -41,7 +41,7 @@ let portfolioData = {
       link: "/strangers",
       short_description:
         "Midi Interface for controlling Qlab. Immersive & participatory piece.",
-      minature_image_url: "/images/strangers_thumbnail.jpg",
+      minature_image_url: "/images/thumbnails/strangers.jpg",
       minature_image_tag: "Midi controller"
     },
     {
@@ -50,7 +50,7 @@ let portfolioData = {
       link: "/hoyh",
       short_description:
         "Sensors for monitoring audience's pulse and GSR. Theatre performance.",
-      minature_image_url: "/images/hoyh_thumbnail.jpg",
+      minature_image_url: "/images/thumbnails/hoyh.jpg",
       minature_image_tag: "Midi controller"
     },
     {
@@ -59,7 +59,7 @@ let portfolioData = {
       link: "/minirig",
       short_description:
         "Theatre model with minature lighting rig controlled by DMX",
-      minature_image_url: "/images/minirig_thumbnail.jpg",
+      minature_image_url: "/images/thumbnails/minirig.jpg",
       minature_image_tag: "3D printed minature theatre lights"
     },
     {
@@ -67,7 +67,7 @@ let portfolioData = {
       id: 8,
       link: "/expo",
       short_description: "Interactive LEDs matrix display",
-      minature_image_url: "/images/expo_thumbnail.jpg",
+      minature_image_url: "/images/thumbnails/expo.jpg",
       minature_image_tag: "3D printed minature theatre lights"
     }
   ]
