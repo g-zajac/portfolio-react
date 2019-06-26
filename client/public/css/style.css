@@ -222,10 +222,21 @@ body {
 
 #about_text_about_me {
   text-align: justify;
+  font-size: 0.9em;
 }
 
 #about_text_contact {
   text-align: left;
+}
+
+#social_links {
+  padding: 20px;
+  /* border: 1px solid cyan; */
+  /* text-align: center; */
+}
+
+#social_links i {
+  margin: 10px;
 }
 
 /* ------------------------------------------------------------------ */
