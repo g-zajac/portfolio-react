@@ -6,7 +6,7 @@ let portfolioData = {
       link: "/siegfried",
       short_description:
         "Sparks and fire flames special effect for Siegfried opera.",
-      minature_image_url: "/images/siegfried-cover-1920x1080.jpg",
+      minature_image_url: "/images/thumbnails/siegfried.jpg",
       minature_image_tag: "Siegfried - sepcial effect"
     },
     {
@@ -15,7 +15,7 @@ let portfolioData = {
       link: "/twelve",
       short_description:
         "Contemporary dance performance with with remotely controlled LEDs in costumes.",
-      minature_image_url: "/images/12_minature_image.jpg",
+      minature_image_url: "/images/thumbnails/12.jpg",
       minature_image_tag: "Led Costumes"
     },
     {
@@ -24,7 +24,7 @@ let portfolioData = {
       link: "/trapped",
       short_description:
         "Head-torches controlled by lighting desk for dance/theatre work.",
-      minature_image_url: "/images/trapped_thumbnail.jpg",
+      minature_image_url: "/images/thumbnails/trapped.jpg",
       minature_image_tag: "ArtNet torches"
     },
     {
