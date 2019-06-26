@@ -24,75 +24,85 @@ export class Trapped extends React.Component {
 
   render() {
     console.log("props data in trapped: ", this.props);
-
     return (
-      <div className="project" id="trapped">
-        <Link to="/">
-          <i className="far fa-times-circle fa-2x" />
-        </Link>
-        <div className="project_header">
-          <h2>Trapped</h2>
-          <h4>
-            Head-torches controlled by lighting desk for dance/theatre work.
-          </h4>
-          <p>Artistic Director: Rachel Jonhson</p>
-          <p>Experiential</p>
-          <p>Lighting: Michael Manion</p>
-          <p>London, 2016</p>
-        </div>
-        <div className="project_content">
-          <div className="project_story">
-            <h3>STORY</h3>
-            <p>
-              Atmospheric production based and inspired by the collapse of the
-              San Jose Mine, Chile in 2010. The performance is shown in confined
-              underground spaces like mine, tunnels or a colliery.
-            </p>
+      <React.Fragment>
+        <img
+          id="trapped_background_image"
+          src="images/background/trapped.jpg"
+          alt="background image"
+        />
+        <div className="project" id="trapped">
+          <Link to="/">
+            <i className="far fa-times-circle fa-2x" />
+          </Link>
+          <div className="project_header">
+            <h2>Trapped</h2>
+            <h4>
+              Head-torches controlled by lighting desk for dance/theatre work.
+            </h4>
+            <p>Artistic Director: Rachel Jonhson</p>
+            <p>Experiential</p>
+            <p>Lighting: Michael Manion</p>
+            <p>London, 2016</p>
           </div>
-
-          <div className="project_challenge">
-            <h3>CHALANGE</h3>
-            <p>
-              Limited audience members wears helmets with head torches. To
-              enhance lighting production and audiences darkness experience the
-              head torches needed to be remotely controlled by a lighting desk.
-            </p>
-          </div>
-
-          <div className="project_solution">
-            <h3>SOLUTION</h3>
-            <p>
-              I modified off-the-shelf head-torches. I added a wifi module
-              ESP8266 ESP-12 to each of 40 head-torches. The module connects to
-              WiFi and listens for Art-Net. Received value switch torch’s LED on
-              or off, so that a lighting desk or software can controll all of
-              them. The wifi chip was assembled on torch LED bottom layer PCB.
-              Power supply, 3V3 DC-DC converter is mounted on side so it can fit
-              inside the torch. Each of the torches also sends a OSC diagnostic
-              message like: wifi channel, signal strength, led status, battery
-              level, etc for monitoring purpose i.e: with TouchOSC app.
-            </p>
-
-            <div className="images_gallery">
-              <Gallery
-                images={this.state.images}
-                enableImageSelection={false}
-                showLightboxThumbnails={true}
-                rowHeight={84}
-              />
+          <div className="project_content">
+            <div className="project_story">
+              <h3>STORY</h3>
+              <p>
+                Atmospheric production based and inspired by the collapse of the
+                San Jose Mine, Chile in 2010. The performance is shown in
+                confined underground spaces like mine, tunnels or a colliery.
+              </p>
             </div>
-          </div>
 
-          <p>
-            To cover long tunnels and underground extend spaces I used multiple
-            PoE WiFi access points, mainly UniFi AP AC Long Range. They share
-            the same SSID on non overlapping radio channels 1,6,11. The ESP8266
-            chip does not support switching between multiple SSIDs, like mobile
-            phones or laptops. Monitoring and switching procedure was
-            implemented in the code.
-          </p>
+            <div className="project_challenge">
+              <h3>CHALLANGE</h3>
+              <p>
+                Limited audience members wears helmets with head torches. To
+                enhance lighting production and audiences darkness experience
+                the head torches needed to be remotely controlled by a lighting
+                desk.
+              </p>
+            </div>
+
+            <div className="project_solution">
+              <h3>SOLUTION</h3>
+              <div className="project_solution_split">
+                <p id="project_solution_trapped_text">
+                  I modified off-the-shelf head-torches. I added a wifi module
+                  ESP8266 ESP-12 to each of 40 head-torches. The module connects
+                  to WiFi and listens for Art-Net. Received value switch torch’s
+                  LED on or off, so that a lighting desk or software can
+                  controll all of them. The wifi chip was assembled on torch LED
+                  bottom layer PCB. Power supply, 3V3 DC-DC converter is mounted
+                  on side so it can fit inside the torch. Each of the torches
+                  also sends a OSC diagnostic message like: wifi channel, signal
+                  strength, led status, battery level, etc for monitoring
+                  purpose i.e: with TouchOSC app.
+                </p>
+
+                <div className="images_gallery_trapped">
+                  <Gallery
+                    images={this.state.images}
+                    enableImageSelection={false}
+                    showLightboxThumbnails={true}
+                    rowHeight={84}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <p>
+              To cover long tunnels and underground extend spaces I used
+              multiple PoE WiFi access points, mainly UniFi AP AC Long Range.
+              They share the same SSID on non overlapping radio channels 1,6,11.
+              The ESP8266 chip does not support switching between multiple
+              SSIDs, like mobile phones or laptops. Monitoring and switching
+              procedure was implemented in the code.
+            </p>
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
