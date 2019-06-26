@@ -16,6 +16,7 @@ import { Strangers } from "./projects/strangers";
 import { Hoyh } from "./projects/hoyh";
 import { Minirig } from "./projects/minirig";
 import { Iot } from "./projects/iot";
+import { Test } from "./components/test";
 
 export default class App extends React.Component {
   render() {
@@ -47,6 +48,11 @@ export default class App extends React.Component {
             <Route exact path="/hoyh" render={() => <Hoyh />} />
             <Route exact path="/minirig" render={() => <Minirig />} />
             <Route exact path="/iot" render={() => <Iot />} />
+            <Route
+              exact
+              path="/test"
+              render={() => <Test portfolioData={portfolioData.projects} />}
+            />
           </AnimatedSwitch>
         </BrowserRouter>
         <Plx className="MyAwesomeParallax" parallaxData={contactPlxData}>
