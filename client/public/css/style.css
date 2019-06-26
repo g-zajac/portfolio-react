@@ -133,11 +133,11 @@ body {
   border: 2px solid orange;
 }
 
-/* .box::before {
+.box::before {
   content: "";
   display: block;
   padding-top: 100%;
-} */
+}
 
 .box .portfolio_thumbnail {
   position: absolute;
@@ -284,3 +284,6 @@ body {
   display: flex;
   flex-direction: column;
 }
+/*
+--------------------------------------------------------------------------
+*/
