@@ -68,7 +68,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: grayscale(50%);
+  filter: grayscale(60%);
 }
 /* #background_image::after {
   content: "";
@@ -270,4 +270,17 @@ body {
 #smt {
   /* color: var(--porftolio-smt-font-color); */
   color: black;
+}
+
+/* ------------------------------------------------------------------ */
+/* SMT project section
+ ------------------------------------------------------------------ */
+
+.images_gallery {
+  width: 70%;
+}
+
+.project_solution {
+  display: flex;
+  flex-direction: column;
 }
