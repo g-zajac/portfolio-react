@@ -56,3 +56,4 @@ export default class App extends React.Component {
     );
   }
 }
+//TODO fix foote paralax
