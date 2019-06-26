@@ -11,7 +11,7 @@ const welcomePlxData = [
       },
       {
         startValue: 1,
-        endValue: 0.6,
+        endValue: 0.4,
         property: "opacity"
       }
     ]
