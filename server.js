@@ -51,3 +51,11 @@ io.on("connection", function(socket) {
 exports.sendTemperature = function(temp) {
     io.sockets.emit("temperature", temp);
 };
+
+exports.sendHumidity = function(hum) {
+    io.sockets.emit("humidity", hum);
+};
+
+exports.sendCO2 = function(co2) {
+    io.sockets.emit("co2", co2);
+};
