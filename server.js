@@ -1,6 +1,9 @@
 const express = require("express");
 const db = require("./utils/db");
 const app = express();
+// module.exports = {
+//     sendTemperature
+// };
 console.log(process.env.NODE_PATH);
 var mqtt = require("./utils/mqtt");
 
@@ -44,3 +47,7 @@ io.on("connection", function(socket) {
         mqtt.sendValue(msg.toString());
     });
 });
+
+exports.sendTemperature = function(temp) {
+    io.sockets.emit("temperature", temp);
+};
