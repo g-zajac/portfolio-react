@@ -8,7 +8,7 @@ class PortfolioThumbnail extends React.Component {
   render() {
     let projectData = this.props.data;
     return (
-      <ScrollAnimation animateIn="fadeIn">
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
         <div className="portfolio_thumbnail">
           <Link to={projectData.link}>
             <div className="overlay_box">
