@@ -19,7 +19,7 @@ export function Welcome() {
       </Zoom>
       <div id="scroll_down">
         <a href="#portfolio">
-          <i class="far fa-arrow-alt-circle-down fa-3x" />
+          <i className="far fa-arrow-alt-circle-down fa-3x" />
         </a>
       </div>
       <div id="overlay_welcome" />
