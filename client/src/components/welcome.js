@@ -4,8 +4,8 @@ import Zoom from "react-reveal/Zoom";
 export function Welcome() {
   return (
     <div id="welcome">
-      <Zoom cascade>
-        <p id="intro_text">
+      <Zoom>
+        <div id="intro_text">
           /*
           <br />
           Hi, I am Grzegorz,
@@ -15,8 +15,13 @@ export function Welcome() {
           magic
           <br />
           */
-        </p>
+        </div>
       </Zoom>
+      <div id="scroll_down">
+        <a href="#portfolio">
+          <i class="far fa-arrow-alt-circle-down fa-3x" />
+        </a>
+      </div>
       <div id="overlay_welcome" />
       <img id="background_image" src="images/esp.jpg" alt="" />
     </div>
