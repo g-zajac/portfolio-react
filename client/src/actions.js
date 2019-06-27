@@ -11,3 +11,10 @@ export function slider(value) {
     sliderValue: value
   };
 }
+
+export function temperature(value) {
+  return {
+    type: "TEMPERATURE",
+    temp: value
+  };
+}
