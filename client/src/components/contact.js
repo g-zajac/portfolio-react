@@ -29,8 +29,12 @@ export function Contact() {
           <br />
           Please feel free to email or call me.
           <br />
-          <i className="fas fa-phone" /> +49 152 55652280
-          <i className="fas fa-at" /> grzegorz.zajac@me.com{" "}
+          <p>
+            <i className="fas fa-phone" /> +49 152 55652280{" "}
+          </p>
+          <p>
+            <i className="fas fa-at" /> grzegorz.zajac@me.com{" "}
+          </p>
           <div id="social_links">
             <i className="fab fa-github fa-2x" />
             <i className="fab fa-linkedin fa-2x" />
