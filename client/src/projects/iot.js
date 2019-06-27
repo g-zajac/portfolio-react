@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { socket } from "../socket";
 
 import Thermometer from "react-thermometer-component";
+import Chart from "react-google-charts";
 
 const useStyles = makeStyles({
   root: {
@@ -42,29 +43,31 @@ function Iot(props) {
         <i className="far fa-times-circle fa-2x" />
       </Link>
       <div id="iot_container">
-        <div className={classes.root}>
-          <div id="iot_socket">
-            <i className="fas fa-plug fa-2x" />
-            <Switch
-              checked={state.checkedB}
-              onChange={toggleHandleChange("checkedB")}
-              value="checkedB"
-              color="primary"
-              inputProps={{ "aria-label": "primary checkbox" }}
-            />
-          </div>
-          <div id="iot_bulb">
-            <i className="fas fa-lightbulb fa-2x" />
-            <Slider
-              defaultValue={30}
-              onChange={sliderHandleChange}
-              getAriaValueText={valuetext}
-              aria-labelledby="continuous-slider"
-              valueLabelDisplay="auto"
-              marks
-              min={0}
-              max={100}
-            />
+        <div id="esp_things">
+          <div className={classes.root}>
+            <div id="iot_socket">
+              <i className="fas fa-plug fa-2x" />
+              <Switch
+                checked={state.checkedB}
+                onChange={toggleHandleChange("checkedB")}
+                value="checkedB"
+                color="primary"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
+            </div>
+            <div id="iot_bulb">
+              <i className="fas fa-lightbulb fa-2x" />
+              <Slider
+                defaultValue={30}
+                onChange={sliderHandleChange}
+                getAriaValueText={valuetext}
+                aria-labelledby="continuous-slider"
+                valueLabelDisplay="auto"
+                marks
+                min={0}
+                max={100}
+              />
+            </div>
           </div>
           <div id="iot_temp">
             <Thermometer
@@ -75,6 +78,67 @@ function Iot(props) {
               format="°C"
               size="normal"
               height="200"
+            />
+          </div>
+
+          <div id="test_chart" style={{ display: "flex", maxWidth: 900 }}>
+            <Chart
+              width={"100%"}
+              height={"400"}
+              chartType="LineChart"
+              loader={<div>Loading Chart</div>}
+              data={[
+                ["Date", "Value"],
+                [new Date(1996, 1, 1), 2000 * Math.random()],
+                [new Date(1997, 1, 1), 2000 * Math.random()],
+                [new Date(1998, 1, 1), 2000 * Math.random()],
+                [new Date(1999, 1, 1), 2000 * Math.random()],
+                [new Date(2000, 1, 1), 2000 * Math.random()],
+                [new Date(2001, 1, 1), 2000 * Math.random()],
+                [new Date(2002, 1, 1), 2000 * Math.random()],
+                [new Date(2003, 1, 1), 2000 * Math.random()],
+                [new Date(2004, 1, 1), 2000 * Math.random()],
+                [new Date(2005, 1, 1), 2000 * Math.random()],
+                [new Date(2006, 1, 1), 2000 * Math.random()],
+                [new Date(2007, 1, 1), 2000 * Math.random()],
+                [new Date(2008, 1, 1), 2000 * Math.random()],
+                [new Date(2009, 1, 1), 2000 * Math.random()]
+              ]}
+              options={{
+                // Use the same chart area width as the control for axis alignment.
+                chartArea: { height: "80%", width: "90%" },
+                hAxis: { slantedText: false },
+                vAxis: { viewWindow: { min: 0, max: 2000 } },
+                legend: { position: "none" },
+                backgroundColor: "transparent",
+                controlArea: { backgroundColor: "transparent" }
+              }}
+              rootProps={{ "data-testid": "3" }}
+              chartPackages={["corechart", "controls"]}
+              controls={[
+                {
+                  controlType: "ChartRangeFilter",
+                  options: {
+                    filterColumnIndex: 0,
+                    ui: {
+                      chartType: "LineChart",
+                      chartOptions: {
+                        chartArea: { width: "90%", height: "50%" },
+                        hAxis: { baselineColor: "none" }
+                      }
+                    }
+                  },
+                  controlPosition: "bottom",
+                  controlWrapperParams: {
+                    state: {
+                      range: {
+                        start: new Date(1997, 1, 9),
+                        end: new Date(2002, 2, 20)
+                      }
+                    }
+                  }
+                }
+              ]}
             />
           </div>
         </div>
