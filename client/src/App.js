@@ -4,11 +4,9 @@ import { Portfolio } from "./components/portfolio";
 import { Contact } from "./components/contact";
 import portfolioData from "./data/portfolioData";
 import { welcomePlxData, contactPlxData } from "./data/parallaxData.js";
-// import Plx from "react-plx";
+import Plx from "react-plx";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
-// import { StickyContainer, Sticky } from "react-sticky";
-import Sticky from "react-stickynode";
 
 import { Siegfried } from "./projects/siegfried";
 import { Twelve } from "./projects/twelve";
@@ -25,10 +23,9 @@ export default class App extends React.Component {
     console.log("portfoli data: ", this.portfolioData);
     return (
       <div className="container">
-        <Sticky enabled={true} top={50} bottomBoundary="#portfolio">
+        <Plx className="myParallax" parallaxData={welcomePlxData}>
           <Welcome />
-        </Sticky>
-
+        </Plx>
         <BrowserRouter>
           <AnimatedSwitch
             atEnter={{ opacity: 0 }}
@@ -58,7 +55,9 @@ export default class App extends React.Component {
             />
           </AnimatedSwitch>
         </BrowserRouter>
-        <Contact />
+        <Plx className="myParallax" parallaxData={contactPlxData}>
+          <Contact />
+        </Plx>
       </div>
     );
   }
