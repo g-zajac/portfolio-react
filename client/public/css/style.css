@@ -402,3 +402,10 @@ body {
 #iot_temp {
   padding: 10px;
 }
+
+#env {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
