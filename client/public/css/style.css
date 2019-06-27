@@ -41,7 +41,7 @@ body {
 /* Welcome section
  ------------------------------------------------------------------ */
 #container {
-  /* background: var(--portfolio-bg-color); */
+  background: var(--portfolio-bg-color);
 }
 
 #welcome {
@@ -350,13 +350,19 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/* Minirig project section
+/* IoT project section
  ------------------------------------------------------------------ */
 #iot_container {
   padding: 20px;
 }
+
+#esp_things {
+  display: flex;
+  flex-direction: row;
+}
+
 #iot_container .fas {
-  padding: 10px;
+  padding: 20px;
 }
 #iot_socket {
   display: flex;
