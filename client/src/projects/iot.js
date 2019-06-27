@@ -39,7 +39,7 @@ function Iot(props) {
 
   return (
     <div className="project" id="iot">
-      <Link to="/">
+      <Link to="/#portfolio">
         <i className="far fa-times-circle fa-2x" />
       </Link>
       <div id="iot_container">

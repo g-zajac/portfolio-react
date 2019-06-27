@@ -3,7 +3,7 @@ let portfolioData = {
     {
       title: "Siegfried",
       id: 1,
-      link: "/siegfried",
+      link: "/siegfried#siegfried",
       short_description:
         "Sparks and fire flames special effect for Siegfried opera.",
       minature_image_url: "/images/thumbnails/siegfried.jpg",
@@ -12,7 +12,7 @@ let portfolioData = {
     {
       title: "Twelve",
       id: 2,
-      link: "/twelve",
+      link: "/twelve#twelve",
       short_description:
         "Contemporary dance performance with with remotely controlled LEDs in costumes.",
       minature_image_url: "/images/thumbnails/12.jpg",
@@ -21,7 +21,7 @@ let portfolioData = {
     {
       title: "Trapped",
       id: 3,
-      link: "/trapped",
+      link: "/trapped#trapped",
       short_description:
         "Head-torches controlled by lighting desk for dance/theatre work.",
       minature_image_url: "/images/thumbnails/trapped.jpg",
@@ -30,7 +30,7 @@ let portfolioData = {
     {
       title: "Shiver Me Timbers",
       id: 4,
-      link: "/smt",
+      link: "/smt#smt",
       short_description: "Multimedia Server for a stormy sea installation.",
       minature_image_url: "/images/thumbnails/smt.jpg",
       minature_image_tag: "Multimedia server"
@@ -38,7 +38,7 @@ let portfolioData = {
     {
       title: "Strangers & Others",
       id: 5,
-      link: "/strangers",
+      link: "/strangers#strangers",
       short_description:
         "Midi Interface for controlling Qlab. Immersive & participatory piece.",
       minature_image_url: "/images/thumbnails/strangers.jpg",
@@ -47,7 +47,7 @@ let portfolioData = {
     {
       title: "The Hairs of Your Head Are Numbered",
       id: 6,
-      link: "/hoyh",
+      link: "/hoyh#hoyh",
       short_description:
         "Sensors for monitoring audience's pulse and GSR. Theatre performance.",
       minature_image_url: "/images/thumbnails/hoyh.jpg",
@@ -56,7 +56,7 @@ let portfolioData = {
     {
       title: "Theatre Lighting Rig Model",
       id: 7,
-      link: "/minirig",
+      link: "/minirig#minirig",
       short_description:
         "Theatre model with minature lighting rig controlled by DMX",
       minature_image_url: "/images/thumbnails/minirig.jpg",
@@ -65,7 +65,7 @@ let portfolioData = {
     {
       title: "Interactive display",
       id: 8,
-      link: "/expo",
+      link: "/expo#expo",
       short_description: "Interactive LEDs matrix display",
       minature_image_url: "/images/thumbnails/expo.jpg",
       minature_image_tag: "3D printed minature theatre lights"
