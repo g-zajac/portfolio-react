@@ -5,7 +5,7 @@ import VisitsChart from "../components/smtVisitsChart";
 export function Smt() {
   return (
     <div className="project" id="smt">
-      <Link to="/">
+      <Link to="/#portfolio">
         <i className="far fa-times-circle fa-2x" />
       </Link>
       <div className="project_header">

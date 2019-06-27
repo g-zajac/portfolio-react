@@ -32,7 +32,7 @@ export class Trapped extends React.Component {
           alt="background image"
         />
         <div className="project" id="trapped">
-          <Link to="/">
+          <Link to="/#portfolio">
             <i className="far fa-times-circle fa-2x" />
           </Link>
           <div className="project_header">

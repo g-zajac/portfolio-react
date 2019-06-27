@@ -5,7 +5,7 @@ import Jsc3dViewer from "react-jsc3d";
 export function Minirig() {
   return (
     <div className="project" id="minirig">
-      <Link to="/">
+      <Link to="/#portfolio">
         <i className="far fa-times-circle fa-2x" />
       </Link>
       <div className="project_header">

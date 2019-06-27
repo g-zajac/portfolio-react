@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function Hoyh() {
   return (
     <div className="project" id="hoyh">
-      <Link to="/">
+      <Link to="/#portfolio">
         <i className="far fa-times-circle fa-2x" />
       </Link>
       <div className="project_header">
