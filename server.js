@@ -42,6 +42,15 @@ io.on("connection", function(socket) {
         mqtt.sendToggle(toggle);
     });
 
+    socket.on("toggleBulb", msg => {
+        let toggle;
+        if (msg == true) {
+            toggle = "1";
+        } else toggle = "0";
+        console.log("socket io bulb received: ", toggle);
+        mqtt.sendBulb(toggle);
+    });
+
     socket.on("sliderValue", msg => {
         console.log("socket io slider received: ", msg);
         mqtt.sendValue(msg.toString());

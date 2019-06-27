@@ -18,13 +18,20 @@ const useStyles = makeStyles({
 function Iot(props) {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    checkedB: true
+    checkedA: false,
+    checkedB: false
   });
   const [sensor, setTemp] = React.useState({ temperature: 0 });
 
   const toggleHandleChange = name => event => {
     console.log("toggle value: ", event.target.checked);
     socket.emit("toggleSwitch", event.target.checked);
+    setState({ ...state, [name]: event.target.checked });
+  };
+
+  const toggleBulbChange = name => event => {
+    console.log("toggle value: ", event.target.checked);
+    socket.emit("toggleBulb", event.target.checked);
     setState({ ...state, [name]: event.target.checked });
   };
 
@@ -48,8 +55,8 @@ function Iot(props) {
             <div id="iot_socket">
               <i className="fas fa-plug fa-2x" />
               <Switch
-                checked={state.checkedB}
-                onChange={toggleHandleChange("checkedB")}
+                checked={state.checkedA}
+                onChange={toggleHandleChange("checkedA")}
                 value="checkedB"
                 color="primary"
                 inputProps={{ "aria-label": "primary checkbox" }}
@@ -65,9 +72,16 @@ function Iot(props) {
                 valueLabelDisplay="auto"
                 marks
                 min={0}
-                max={100}
+                max={255}
               />
             </div>
+            <Switch
+              checked={state.checkedB}
+              onChange={toggleBulbChange("checkedB")}
+              value="checkedB"
+              color="primary"
+              inputProps={{ "aria-label": "primary checkbox" }}
+            />
           </div>
           <div id="iot_temp">
             <Thermometer

@@ -34,7 +34,8 @@ client.on("connect", function() {
 
 module.exports = {
     sendToggle,
-    sendValue
+    sendValue,
+    sendBulb
 };
 
 client.on("message", function(topic, message) {
@@ -64,6 +65,9 @@ function sendTestMessage() {
 function sendToggle(onOff) {
     client.publish("/floating/socket1/relay/0/set", onOff);
 }
+function sendBulb(onOff) {
+    client.publish("/bulb/relay/0/set", onOff);
+}
 function sendValue(value) {
-    client.publish("/bulb/value/", value);
+    client.publish("/bulb/brightness/set", value);
 }
