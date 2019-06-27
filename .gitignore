@@ -6,4 +6,5 @@ notes.md
 client/public/images
 client/public/fonts
 /public/fonts
+video/
 secrets.json
