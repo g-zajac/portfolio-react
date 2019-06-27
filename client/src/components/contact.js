@@ -23,24 +23,20 @@ export function Contact() {
       </div>
       <div className="column" />
       <div className="column">
-        <p id="about_text_contact">
+        <div id="about_text_contact">
           Interested in working together?
           <br /> Questions about projects?
           <br />
           Please feel free to email or call me.
           <br />
-          <p>
-            <i class="fas fa-phone" /> +49 152 55652280
-          </p>
-          <p>
-            <i class="fas fa-at" /> grzegorz.zajac@me.com{" "}
-          </p>
+          <i className="fas fa-phone" /> +49 152 55652280
+          <i className="fas fa-at" /> grzegorz.zajac@me.com{" "}
           <div id="social_links">
-            <i class="fab fa-github fa-2x" />
-            <i class="fab fa-linkedin fa-2x" />
-            <i class="fab fa-whatsapp-square fa-2x" />
+            <i className="fab fa-github fa-2x" />
+            <i className="fab fa-linkedin fa-2x" />
+            <i className="fab fa-whatsapp-square fa-2x" />
           </div>
-        </p>
+        </div>
       </div>
     </div>
   );
