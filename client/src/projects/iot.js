@@ -80,6 +80,11 @@ function Iot(props) {
               height="200"
             />
           </div>
+          <div id="env">
+            <p> Temperature: {props.temperature} </p>
+            <p> Humidity: {props.humidity} % </p>
+            <p> CO2: {props.co2} </p>
+          </div>
         </div>
       </div>
     </div>
@@ -93,7 +98,9 @@ function valuetext(value) {
 const mapStateToProps = state => {
   console.log("state.temp:", state.temperature);
   return {
-    temperature: state.temperature
+    temperature: state.temperature,
+    humidity: state.humidity,
+    co2: state.co2
   };
 };
 
