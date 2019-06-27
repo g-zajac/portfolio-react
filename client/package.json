@@ -20,6 +20,8 @@
     "react-scripts": "3.0.1",
     "react-scroll-parallax": "^2.1.2",
     "react-stack-grid": "^0.7.1",
+    "react-sticky": "^6.0.3",
+    "react-stickynode": "^2.1.1",
     "react-thermometer-component": "^1.0.1",
     "react-vis": "^1.11.7",
     "redux": "^4.0.1",
