@@ -5,6 +5,9 @@ import Switch from "@material-ui/core/Switch";
 import Slider from "@material-ui/lab/Slider";
 import { makeStyles } from "@material-ui/core/styles";
 import { socket } from "../socket";
+
+import Thermometer from "react-thermometer-component";
+
 const useStyles = makeStyles({
   root: {
     width: 200
@@ -63,7 +66,17 @@ function Iot(props) {
               max={100}
             />
           </div>
-          <div>Temperature {props.temperature}</div>
+          <div id="iot_temp">
+            <Thermometer
+              theme="light"
+              value={props.temperature}
+              max="40"
+              steps="4"
+              format="°C"
+              size="normal"
+              height="200"
+            />
+          </div>
         </div>
       </div>
     </div>
