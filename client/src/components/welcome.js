@@ -8,7 +8,7 @@ export function Welcome() {
         <div id="intro_text">
           /*
           <br />
-          Hi, I am Grzegorz,
+          Hi, I am Grzegorz, /ˈɡʐɛ.ɡɔʂ/`
           <br /> Berlin based passionate engineer, multidiscipline theatre
           technician, maker and problem solver.
           <br />I provide innovative embedded electronic solutions for theatre
