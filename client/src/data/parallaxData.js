@@ -22,18 +22,13 @@ let contactPlxData = [
   {
     start: "#contact",
     // startOffset: "100vh",
-    duration: "50vh",
+    duration: "20vh",
     properties: [
       {
         startValue: 0,
-        endValue: -50,
+        endValue: -70,
         unit: "vh",
         property: "translateY"
-      },
-      {
-        startValue: 0,
-        endValue: 1,
-        property: "opacity"
       }
     ]
   }
