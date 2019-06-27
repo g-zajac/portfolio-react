@@ -74,7 +74,7 @@ function Iot(props) {
               theme="light"
               value={props.temperature}
               max="40"
-              steps="4"
+              steps="1"
               format="°C"
               size="normal"
               height="200"
