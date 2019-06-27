@@ -25,8 +25,8 @@ let contactPlxData = [
     duration: "50vh",
     properties: [
       {
-        startValue: 50,
-        endValue: 0,
+        startValue: 0,
+        endValue: -50,
         unit: "vh",
         property: "translateY"
       },
