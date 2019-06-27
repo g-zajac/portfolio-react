@@ -3,7 +3,7 @@ import React from "react";
 export function Contact() {
   return (
     <div id="contact">
-      <div className="column">
+      <div className="column one">
         <img
           src="../images/about/portrait.jpg"
           alt=" Grzegorz Zajac"
@@ -21,8 +21,8 @@ export function Contact() {
           as a dad and a boater.
         </p>
       </div>
-      <div className="column" />
-      <div className="column">
+
+      <div className="column two">
         <div id="about_text_contact">
           Interested in working together?
           <br /> Questions about projects?
@@ -30,10 +30,10 @@ export function Contact() {
           Please feel free to email or call me.
           <br />
           <p>
-            <i className="fas fa-phone" /> +49 152 55652280{" "}
+            <i className="fas fa-phone" /> +49 152 55652280
           </p>
           <p>
-            <i className="fas fa-at" /> grzegorz.zajac@me.com{" "}
+            <i className="fas fa-at" /> grzegorz.zajac@me.com
           </p>
           <div id="social_links">
             <i className="fab fa-github fa-2x" />
