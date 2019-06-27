@@ -15,7 +15,7 @@ import { Smt } from "./projects/smt";
 import { Strangers } from "./projects/strangers";
 import { Hoyh } from "./projects/hoyh";
 import { Minirig } from "./projects/minirig";
-import { Iot } from "./projects/iot";
+import Iot from "./projects/iot";
 import { Test } from "./components/test";
 
 export default class App extends React.Component {
