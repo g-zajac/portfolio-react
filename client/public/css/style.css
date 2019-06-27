@@ -103,6 +103,24 @@ body {
 #intro_text.p {
   line-height: 0.5;
 }
+
+#scroll_down {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  z-index: 5;
+  color: white;
+}
+#scroll_down a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+#scroll_down a:hover {
+  opacity: 1;
+}
 /* ------------------------------------------------------------------ */
 /* Portfolio section
  ------------------------------------------------------------------ */
@@ -117,6 +135,7 @@ body {
 }
 
 .portfolio_title {
+  padding-top: 40px;
   font-size: 1.2em;
 }
 /* TODO make minatures square */
