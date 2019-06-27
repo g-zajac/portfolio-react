@@ -21,6 +21,12 @@ client.on("connect", function() {
     client.subscribe("/node/sensor/dht/temperature", function(err) {
         console.log(err);
     });
+    client.subscribe("/node/sensor/dht/humidity", function(err) {
+        console.log(err);
+    });
+    client.subscribe("/node/sensor/ccs/CO2", function(err) {
+        console.log(err);
+    });
     setInterval(function() {
         client.publish("/interval/ping", "test");
     }, 3000);
@@ -33,12 +39,21 @@ module.exports = {
 
 client.on("message", function(topic, message) {
     // message is Buffer
-    console.log(topic.toString());
-    console.log(message.toString());
+    // console.log(topic.toString());
+    // console.log(message.toString());
     if (topic == "/node/sensor/dht/temperature") {
         console.log("temperature: ", message.toString());
         serverSocket.sendTemperature(message.toString());
     }
+    if (topic == "/node/sensor/dht/humidity") {
+        console.log("humidity: ", message.toString());
+        serverSocket.sendHumidity(message.toString());
+    }
+    if (topic == "/node/sensor/ccs/CO2") {
+        console.log("co2: ", message.toString());
+        serverSocket.sendCO2(message.toString());
+    }
+    // TODO replace with function, pass message + value
     //TODO send feedback socket io to switch
     // client.end(); //terminating connection and script
 });
