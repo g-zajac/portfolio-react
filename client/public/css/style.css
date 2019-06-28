@@ -225,12 +225,12 @@ body {
 #contact {
   position: relative;
   display: flex;
-  height: 40vh;
+  height: 60vh;
   width: 100%;
   text-align: center;
   background: var(--portfolio-bg-color);
   margin-top: 50px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .column {
   /* width: 30%; */
@@ -288,7 +288,10 @@ body {
   padding: 3%;
   font-size: 0.9em;
 }
-
+/* TODO Dave, turn decoration off */
+#close_link {
+  text-decoration: none;
+}
 .project_background_image {
   position: absolute;
   top: 0;
@@ -340,14 +343,30 @@ body {
   color: black;
 }
 
-/* ------------------------------------------------------------------ */
-/* SMT project section
- ------------------------------------------------------------------ */
-
 .images_gallery {
   width: 70%;
 }
 
+.smt_chart {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.smt_total_visits {
+  text-align: center;
+}
+
+.project_solution_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.smt_block_sch {
+  width: 50vw;
+  object-fit: cover;
+}
 .project_solution {
   display: flex;
   flex-direction: column;
