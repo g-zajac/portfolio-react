@@ -25,6 +25,16 @@ export function Siegfried() {
                 of act one. A special effect for hammering was desired.
               </p>
             </div>
+
+            <ReactPlayer
+              className="siegfried_video_player"
+              url={"./video/siegfried.mp4"}
+              controls
+              light={"./video/siegfried.jpg"}
+              width="426px"
+              height="240px"
+            />
+
             <div className="project_challenge">
               <h3>CHALLANGE</h3>
               <p>
@@ -33,33 +43,38 @@ export function Siegfried() {
               </p>
             </div>
           </div>
-
-          <ReactPlayer
-            className="siegfried_video_player"
-            url={"./video/siegfried.mp4"}
-            controls
-            light={"./video/siegfried.jpg"}
-            width="426px"
-            height="240px"
-          />
         </div>
+        <div className="siegfried_solution_wrapper">
+          <div className="siegfried_images">
+            <img
+              src="../images/siegfried/siegfried1.jpg"
+              alt="siegfried pump controller inside"
+              className="siegfried_img"
+            />
+            <img
+              src="../images/siegfried/siegfried2.jpg"
+              alt="siegfried pump controller outside"
+              className="siegfried_img"
+            />
+          </div>
 
-        <div className="siegfried_project_solution">
-          <h3>SOLUTION</h3>
-          <p>
-            Bespoke pneumatic system was build to blow short burst of air into a
-            anvil chamber filled with magnesium filings and throw them through
-            heating elements. Ignited fillings get out thru slit in the anvil
-            creating the sparks and fire. To trigger the effect in sync with
-            hammering I designed and built an electronic module. The module
-            senses hits with microphone and drives an air valve between
-            compressor and the anvil. The module is build from 3 blocks:
-            microphone input with passive filter, audio preamp and a flip-flop
-            circuit. The filter rolles off all unwanted frequencies and is
-            calculated to respond only on hammer noice. An amplified, filtered
-            hammer sound triggers flip-flop which switch on, hold, and switch
-            off the air valve.
-          </p>
+          <div className="siegfried_project_solution">
+            <h3>SOLUTION</h3>
+            <p>
+              Bespoke pneumatic system was build to blow short burst of air into
+              a anvil chamber filled with magnesium filings and throw them
+              through heating elements. Ignited fillings get out thru slit in
+              the anvil creating the sparks and fire. To trigger the effect in
+              sync with hammering I designed and built an electronic module. The
+              module senses hits with microphone and drives an air valve between
+              compressor and the anvil. The module is build from 3 blocks:
+              microphone input with passive filter, audio preamp and a flip-flop
+              circuit. The filter rolles off all unwanted frequencies and is
+              calculated to respond only on hammer noice. An amplified, filtered
+              hammer sound triggers flip-flop which switch on, hold, and switch
+              off the air valve.
+            </p>
+          </div>
         </div>
       </div>
     </div>
