@@ -16,7 +16,7 @@ export function Minirig() {
       </div>
       <div className="project_content">
         <div className="project_story">
-          <div className="project_solution_split">
+          <div className="minirig_project_solution_split">
             <div id="project_solution_minirig_text">
               <h3>STORY</h3>
               <p>
@@ -48,14 +48,33 @@ export function Minirig() {
                 </p>
               </div>
             </div>
-            <div className="stl_viewer">
-              <Jsc3dViewer
-                width={300}
-                height={300}
-                progressBar={true}
-                modelColor={"brown"}
-                sceneUrl={"../stl/par.stl"}
-              />
+            <div className="minirig_images_column">
+              <div className="stl_viewer">
+                <Jsc3dViewer
+                  width={300}
+                  height={300}
+                  progressBar={true}
+                  modelColor={"brown"}
+                  sceneUrl={"../stl/par.stl"}
+                />
+              </div>
+              <div className="minirig_images">
+                <img
+                  src="../images/minirig/minirig1.jpg"
+                  alt="siegfried pump controller inside"
+                  className="minirig_img"
+                />
+                <img
+                  src="../images/minirig/minirig2.jpg"
+                  alt="siegfried pump controller outside"
+                  className="minirig_img"
+                />
+                <img
+                  src="../images/minirig/minirig4.jpg"
+                  alt="siegfried pump controller outside"
+                  className="minirig_img"
+                />
+              </div>
             </div>
           </div>
         </div>
