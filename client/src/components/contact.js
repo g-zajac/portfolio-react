@@ -44,6 +44,33 @@ export function Contact() {
           </div>
         </div>
       </div>
+      <div className="contact_images">
+        <img
+          src="../images/about/abtt1.png"
+          alt="siegfried pump controller inside"
+          className="cert_img"
+        />
+        <img
+          src="../images/about/abtt2.png"
+          alt="siegfried pump controller outside"
+          className="cert_img"
+        />
+        <img
+          src="../images/about/dante.png"
+          alt="siegfried pump controller outside"
+          className="cert_img"
+        />
+        <img
+          src="../images/about/mtcna.png"
+          alt="siegfried pump controller outside"
+          className="cert_img"
+        />
+        <img
+          src="../images/about/mtcre.png"
+          alt="siegfried pump controller outside"
+          className="cert_img"
+        />
+      </div>
     </div>
   );
 }
