@@ -324,15 +324,14 @@ body {
 /* ------------------------------------------------------------------ */
 /* Trapped project section
  ------------------------------------------------------------------ */
+
 .two_columns_wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
   /* border: 1px solid cyan; */
 }
-.siegfried_images {
-  display: flex;
-}
+
 .project_letf_column {
   /* border: 1px solid brown; */
   padding-right: 20px;
@@ -341,6 +340,11 @@ body {
 .siegfried_project_solution {
   width: 80%;
   border: 1px blue;
+}
+
+.siegfried_img {
+  width: 35%;
+  object-fit: cover;
 }
 
 /* ------------------------------------------------------------------ */
@@ -352,7 +356,7 @@ body {
 }
 
 .images_gallery {
-  width: 70%;
+  width: 80%;
 }
 
 .smt_chart {
@@ -393,6 +397,22 @@ body {
   opacity: 0.2;
 }
 
+.trapped_img {
+  width: 20%;
+  object-fit: cover;
+}
+.project_header_wrapper {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
+}
+.trapped_project_header {
+  width: 100%;
+}
+.trapped_images {
+  height: 100%;
+  /* border: 1px solid green; */
+}
 .project_solution {
   /* border: 1px solid blue; */
 }

@@ -26,25 +26,31 @@ export class Trapped extends React.Component {
     console.log("props data in trapped: ", this.props);
     return (
       <React.Fragment>
-        <img
-          id="trapped_background_image"
-          src="images/background/trapped.jpg"
-          alt="background image"
-        />
         <div className="project" id="trapped">
           <Link to="/#portfolio">
             <i className="far fa-times-circle fa-2x" />
           </Link>
-          <div className="project_header">
-            <h2>Trapped</h2>
-            <h4>
-              Head-torches controlled by lighting desk for dance/theatre work.
-            </h4>
-            <p>Artistic Director: Rachel Jonhson</p>
-            <p>Experiential</p>
-            <p>Lighting: Michael Manion</p>
-            <p>London, 2016</p>
+          <div className="project_header_wrapper">
+            <div className="trapped_project_header">
+              <h2>Trapped</h2>
+              <h4>
+                Head-torches controlled by lighting desk for dance/theatre work.
+              </h4>
+              <p>Artistic Director: Rachel Jonhson</p>
+              <p>Experiential</p>
+              <p>Lighting: Michael Manion</p>
+              <p>London, 2016</p>
+            </div>
+
+            <div className="trapped_images">
+              <img
+                src="../images/trapped/trapped-1.jpg"
+                alt="news poster"
+                className="trapped_img"
+              />
+            </div>
           </div>
+
           <div className="project_content">
             <div className="project_story">
               <h3>STORY</h3>
@@ -203,3 +209,9 @@ Trapped.defaultProps = {
     }
   ]
 };
+
+// <img
+//   id="trapped_background_image"
+//   src="images/background/trapped.jpg"
+//   alt="background image"
+// />
