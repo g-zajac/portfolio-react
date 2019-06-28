@@ -6,7 +6,8 @@ var dbURL =
 var db = spicedPg(dbURL);
 
 module.exports = {
-    getSmtCharData
+    getSmtCharData,
+    getTotalNumberOfVisits
 };
 
 function getSmtCharData() {
@@ -19,6 +20,15 @@ function getSmtCharData() {
         GROUP BY 1
         ORDER BY summary ASC
         LIMIT 10
+    `
+    );
+}
+
+function getTotalNumberOfVisits() {
+    return db.query(
+        `
+        SELECT count(*) FROM smt_visits;
+
     `
     );
 }

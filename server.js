@@ -18,8 +18,19 @@ const io = require("socket.io")(server, {
 app.get("/get-smt-chart-data", (req, res) => {
     db.getSmtCharData()
         .then(results => {
+            // results.rows.map()
+
             console.log("db results: ", results.rows);
             res.json(results.rows);
+        })
+        .catch(err => console.log(err));
+});
+
+app.get("/get-smt-visits", (req, res) => {
+    db.getTotalNumberOfVisits()
+        .then(results => {
+            console.log("db results: ", results.rows);
+            res.json(results.rows[0]);
         })
         .catch(err => console.log(err));
 });
@@ -68,3 +79,17 @@ exports.sendHumidity = function(hum) {
 exports.sendCO2 = function(co2) {
     io.sockets.emit("co2", co2);
 };
+
+//      [new Date(1996, 1, 1), 23],
+//
+//
+// db results:  [ anonymous { summary: 2017-05-23T22:00:00.000Z, count: '12' },
+// [0]   anonymous { summary: 2017-05-24T22:00:00.000Z, count: '30' },
+// [0]   anonymous { summary: 2017-05-25T22:00:00.000Z, count: '42' },
+// [0]   anonymous { summary: 2017-05-26T22:00:00.000Z, count: '36' },
+// [0]   anonymous { summary: 2017-05-27T22:00:00.000Z, count: '30' },
+// [0]   anonymous { summary: 2017-05-28T22:00:00.000Z, count: '36' },
+// [0]   anonymous { summary: 2017-05-29T22:00:00.000Z, count: '52' },
+// [0]   anonymous { summary: 2017-05-30T22:00:00.000Z, count: '43' },
+// [0]   anonymous { summary: 2017-05-31T22:00:00.000Z, count: '49' },
+// [0]   anonymous { summary: 2017-06-01T22:00:00.000Z, count: '51' } ]
