@@ -36,39 +36,41 @@ export class Smt extends React.Component {
           <p>The Word, South Shields, 2017</p>
         </div>
         <div className="project_content">
-          <div className="project_story">
-            <h3>STORY</h3>
-            <p>
-              An interactive exhibition installation where sound and lights
-              sequence is triggered by audience entering the installation space
-              – The Pod
-            </p>
-          </div>
-          <div className="project_challenge">
-            <h3>CHALLANGE</h3>
-            <p>
-              To design and build reliable and stable device which will run
-              lights, sound, motion sensor.
-            </p>
-          </div>
-
           <div className="project_solution_wrapper">
-            <div className="project_solution">
-              <h3>SOLUTION</h3>
-              <p>
-                I designed, programmed and built a mini multimedia server based
-                on Raspberry Pi 3 board with UPS board and Enttec USB2DMX
-                modules. The server were controlling lights, sound and sensor. I
-                used minimal headless version of Debian operating system with
-                QLC+ and Node-Red applications installed. QLC+ run lights
-                sequence and playback sound track. The Node-Red controlls
-                sensor, triggering lights cues, sound cues, schedule, system
-                monitoring, diagnostic MQTT messaging etc. QLC+ was linked with
-                Node-red over OSC. The server run the exhibition for over half a
-                year faultless. The MQTT messagaes were subscribed and stored in
-                a cloud database. Counter and visit chart are generated with
-                grafana from stored data.
-              </p>
+            <div className="smt_column_wrapper">
+              <div className="project_story">
+                <h3>STORY</h3>
+                <p>
+                  An interactive exhibition installation where sound and lights
+                  sequence is triggered by audience entering the installation
+                  space – The Pod
+                </p>
+              </div>
+              <div className="project_challenge">
+                <h3>CHALLANGE</h3>
+                <p>
+                  To design and build reliable and stable device which will run
+                  lights, sound, motion sensor.
+                </p>
+              </div>
+
+              <div className="project_solution">
+                <h3>SOLUTION</h3>
+                <p>
+                  I designed, programmed and built a mini multimedia server
+                  based on Raspberry Pi 3 board with UPS board and Enttec
+                  USB2DMX modules. The server were controlling lights, sound and
+                  sensor. I used minimal headless version of Debian operating
+                  system with QLC+ and Node-Red applications installed. QLC+ run
+                  lights sequence and playback sound track. The Node-Red
+                  controlls sensor, triggering lights cues, sound cues,
+                  schedule, system monitoring, diagnostic MQTT messaging etc.
+                  QLC+ was linked with Node-red over OSC. The server run the
+                  exhibition for over half a year faultless. The MQTT messagaes
+                  were subscribed and stored in a cloud database. Counter and
+                  visit chart are generated with grafana from stored data.
+                </p>
+              </div>
             </div>
             <img
               src="../images/smt/block_sch.png"
