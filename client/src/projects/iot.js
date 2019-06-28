@@ -11,7 +11,7 @@ import Chart from "react-google-charts";
 
 const useStyles = makeStyles({
   root: {
-    width: 200
+    width: 300
   }
 });
 
@@ -64,6 +64,13 @@ function Iot(props) {
             </div>
             <div id="iot_bulb">
               <i className="fas fa-lightbulb fa-2x" />
+              <Switch
+                checked={state.checkedB}
+                onChange={toggleBulbChange("checkedB")}
+                value="checkedB"
+                color="primary"
+                inputProps={{ "aria-label": "primary checkbox" }}
+              />
               <Slider
                 defaultValue={30}
                 onChange={sliderHandleChange}
@@ -75,13 +82,6 @@ function Iot(props) {
                 max={255}
               />
             </div>
-            <Switch
-              checked={state.checkedB}
-              onChange={toggleBulbChange("checkedB")}
-              value="checkedB"
-              color="primary"
-              inputProps={{ "aria-label": "primary checkbox" }}
-            />
           </div>
           <div id="iot_temp">
             <Thermometer

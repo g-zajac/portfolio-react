@@ -10,7 +10,7 @@ export class Trapped extends React.Component {
       selectAllChecked: false
     };
   }
-  //TODO trapped challange
+
   onSelectImage(index, image) {
     var images = this.state.images.slice();
     var img = images[index];
@@ -112,22 +112,6 @@ export class Trapped extends React.Component {
     );
   }
 }
-
-//TODO try to add video to gallery, and block chart
-
-// Trapped.propTypes = {
-//   images: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       src: PropTypes.string.isRequired,
-//       thumbnail: PropTypes.string.isRequired,
-//       srcset: PropTypes.array,
-//       caption: PropTypes.string,
-//       thumbnailWidth: PropTypes.number.isRequired,
-//       thumbnailHeight: PropTypes.number.isRequired,
-//       isSelected: PropTypes.bool
-//     })
-//   ).isRequired
-// };
 
 Trapped.defaultProps = {
   images: [

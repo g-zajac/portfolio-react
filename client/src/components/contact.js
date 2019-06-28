@@ -47,4 +47,3 @@ export function Contact() {
     </div>
   );
 }
-//TODO add icons to contact

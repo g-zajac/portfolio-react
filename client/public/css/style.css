@@ -142,7 +142,7 @@ body {
   padding-top: 40px;
   font-size: 1.2em;
 }
-/* TODO make minatures square */
+
 .portfolio_grid_wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -221,7 +221,7 @@ body {
 /* ------------------------------------------------------------------ */
 /* Contact section
  ------------------------------------------------------------------ */
-/* TODO dave center content */
+
 #contact {
   position: relative;
   height: 60vh;
@@ -294,7 +294,7 @@ body {
   font-size: 0.9em;
   /* border: 2px solid green; */
 }
-/* TODO Dave, turn decoration off */
+
 #close_link {
   text-decoration: none;
 }
@@ -422,6 +422,7 @@ body {
 }
 .trapped_images {
   height: 100%;
+  padding-left: 20px;
   /* border: 1px solid green; */
 }
 .project_solution {
@@ -452,7 +453,7 @@ body {
 #project_solution_minirig_text {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   /* border: 1px solid yellow; */
 }
 
@@ -461,6 +462,10 @@ body {
   display: flex;
   flex-direction: row;
   /* border: 1px solid green; */
+}
+
+.minirig_images {
+  text-align: center;
 }
 
 .minirig_images_column {
@@ -472,7 +477,7 @@ body {
 
 .minirig_img {
   /* width: 20%; */
-  height: 70px;
+  height: 120px;
   object-fit: cover;
   padding: 5px;
 }
@@ -488,6 +493,7 @@ body {
 /* Siegfried project section
  ------------------------------------------------------------------ */
 .siegfried_solution_wrapper {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -512,11 +518,13 @@ body {
 #esp_things {
   display: flex;
   flex-direction: row;
+  width: ;
 }
 
 #iot_container .fas {
   padding: 20px;
 }
+
 #iot_socket {
   display: flex;
   flex-direction: row;

@@ -54,4 +54,3 @@ export function Hoyh() {
     </div>
   );
 }
-//TODO reuse thhumbnail component to add small links to other projects, add X to exit

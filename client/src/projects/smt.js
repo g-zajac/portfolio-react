@@ -3,7 +3,6 @@ import axios from "axios";
 import Gallery from "react-grid-gallery";
 import { Link } from "react-router-dom";
 import VisitsChart from "../components/smtVisitsChart";
-//TODO add link to web page
 export class Smt extends React.Component {
   constructor(props) {
     super(props);

@@ -1,6 +1,5 @@
 var mqtt = require("mqtt");
 var serverSocket = require("../server");
-//TODO put it ot env
 var secrets = require("../secrets.json");
 
 // var client = mqtt.connect("mqtt://10.0.10.30");
@@ -54,8 +53,6 @@ client.on("message", function(topic, message) {
         console.log("co2: ", message.toString());
         serverSocket.sendCO2(message.toString());
     }
-    // TODO replace with function, pass message + value
-    //TODO send feedback socket io to switch
     // client.end(); //terminating connection and script
 });
 
